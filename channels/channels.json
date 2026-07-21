@@ -1,0 +1,1904 @@
+[
+  {
+    "name": "A&E HD",
+    "url": "http://181.224.200.5:2277/play/a01e/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ATV",
+    "url": "http://181.224.200.5:2277/play/3232/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "AXN HD",
+    "url": "http://181.224.200.5:2277/play/a01h/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "America TV HD",
+    "url": "http://181.224.200.5:2277/play/a0dc/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Animal Planet HD",
+    "url": "http://181.224.200.5:2277/play/a00r/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Cinecanal HD",
+    "url": "http://181.224.200.5:2277/play/a013/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "De Pelicula",
+    "url": "http://181.224.200.5:2277/play/a0d1/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Discovery Channel  HD",
+    "url": "http://181.224.200.5:2277/play/a00t/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Discovery Kids HD",
+    "url": "http://181.224.200.5:2277/play/a00o/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Discovery Theater HD",
+    "url": "http://181.224.200.5:2277/play/a0bj/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Discovery World HD",
+    "url": "http://181.224.200.5:2277/play/a0ap/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Disney HD",
+    "url": "http://181.224.200.5:2277/play/a014/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Disney Jr.",
+    "url": "http://181.224.200.5:2277/play/a0dm/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN 2 HD",
+    "url": "http://181.224.200.5:2277/play/a02c/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN 3 HD",
+    "url": "http://181.224.200.5:2277/play/a02g/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN 4HD",
+    "url": "http://181.224.200.5:2277/play/a02o/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN 5HD",
+    "url": "http://181.224.200.5:2277/play/a02k/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN 6HD",
+    "url": "http://181.224.200.5:2277/play/a02h/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN 7 HD",
+    "url": "http://181.224.200.5:2277/play/a02l/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ESPN HD",
+    "url": "http://181.224.200.5:2277/play/aa07/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "El Gourmet HD",
+    "url": "http://181.224.200.5:2277/play/a00n/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "FX HD",
+    "url": "http://181.224.200.5:2277/play/a011/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Global",
+    "url": "http://181.224.200.5:2277/play/a0co/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Golden Edge",
+    "url": "http://181.224.200.5:2277/play/a0bd/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Golden HD",
+    "url": "http://181.224.200.5:2277/play/a0do/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "History 2",
+    "url": "http://181.224.200.5:2277/play/a01b/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "History Channel HD",
+    "url": "http://181.224.200.5:2277/play/a02b/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Home & Health HD",
+    "url": "http://181.224.200.5:2277/play/a00p/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "ID HD",
+    "url": "http://181.224.200.5:2277/play/a00m/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "LOVE NATURE",
+    "url": "http://181.224.200.5:2277/play/a036/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Las Estrellas HD",
+    "url": "http://181.224.200.5:2277/play/a00s/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "NTN24",
+    "url": "http://181.224.200.5:2277/play/a026/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Nat Geo HD",
+    "url": "http://181.224.200.5:2277/play/a012/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Nat Geo HD",
+    "url": "http://181.224.200.5:2277/play/5684/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Nickelodeon HD",
+    "url": "http://181.224.200.5:2277/play/a0bm/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Panamericana",
+    "url": "http://181.224.200.5:2277/play/kkio/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Paramount HD",
+    "url": "http://181.224.200.5:2277/play/a0df/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Pasiones HD",
+    "url": "http://181.224.200.5:2277/play/4324/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "RPP",
+    "url": "http://181.224.200.5:2277/play/a04b/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Sony HD",
+    "url": "http://181.224.200.5:2277/play/a01f/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Star Channel HD",
+    "url": "http://181.224.200.5:2277/play/a00z/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Studio Universal HD",
+    "url": "http://181.224.200.5:2277/play/a01j/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Telemundo",
+    "url": "http://181.224.200.5:2277/play/a01q/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Tlnovelas",
+    "url": "http://181.224.200.5:2277/play/a0d0/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "UNIVERSAL CHANNEL HD",
+    "url": "http://181.224.200.5:2277/play/a0ak/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "UP",
+    "url": "http://181.224.200.5:2277/play/a0d2/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "Warner Channel HD",
+    "url": "http://181.224.200.5:2277/play/a01g/index.m3u8",
+    "type": "m3u8",
+    "group": ""
+  },
+  {
+    "name": "13 C",
+    "url": "http://190.108.83.69:8000/play/a02o/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A G WEST",
+    "url": "http://190.108.83.69:8000/play/a0c9/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H ESPN PREMIUN HD",
+    "url": "http://190.108.83.69:8000/play/a09k/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H ESPN1 HD",
+    "url": "http://190.108.83.69:8000/play/a09e/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H ESPN2 HD",
+    "url": "http://190.108.83.69:8000/play/a09f/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H ESPN3-HD",
+    "url": "http://190.108.83.69:8000/play/a09g/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H ESPN5 HD",
+    "url": "http://190.108.83.69:8000/play/a09i/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H ESPN6 HD",
+    "url": "http://190.108.83.69:8000/play/a096/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H L1MAX",
+    "url": "http://190.108.83.69:8000/play/a0bl/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A H TCM",
+    "url": "http://190.108.83.69:8000/play/a094/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "A&E HD",
+    "url": "http://190.108.83.69:8000/play/a02y/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "AMC HD",
+    "url": "http://190.108.83.69:8000/play/a033/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "AMC SERIES",
+    "url": "http://190.108.83.69:8000/play/a00p/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ATV",
+    "url": "http://190.108.83.69:8000/play/a019/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "AXN HD",
+    "url": "http://190.108.83.69:8000/play/a04c/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Adult Swim",
+    "url": "http://190.108.83.69:8000/play/a02k/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "America TV HD",
+    "url": "http://190.108.83.69:8000/play/a00f/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Animal Planet HD",
+    "url": "http://190.108.83.69:8000/play/a043/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Antena 3",
+    "url": "http://190.108.83.69:8000/play/a01e/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Atres Series HD",
+    "url": "http://190.108.83.69:8000/play/a0al/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "BBC World",
+    "url": "http://190.108.83.69:8000/play/a01c/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "BETHEL TV",
+    "url": "http://190.108.83.69:8000/play/a040/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Baby TV",
+    "url": "http://190.108.83.69:8000/play/a022/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "CCTV-CGTN",
+    "url": "http://190.108.83.69:8000/play/a07h/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "CHV HD",
+    "url": "http://190.108.83.69:8000/play/a03g/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "CNN Chile",
+    "url": "http://190.108.83.69:8000/play/a03p/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "CNN Espanol",
+    "url": "http://190.108.83.69:8000/play/a023/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Canal 13 HD",
+    "url": "http://190.108.83.69:8000/play/a02v/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Canal N",
+    "url": "http://190.108.83.69:8000/play/a07r/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Cartoon Network HD",
+    "url": "http://190.108.83.69:8000/play/a08g/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Cartoonito",
+    "url": "http://190.108.83.69:8000/play/a0aa/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Cinecanal HD",
+    "url": "http://190.108.83.69:8000/play/a048/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Cinecanal HD",
+    "url": "http://190.108.83.69:8000/play/a0bu/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Cinemax",
+    "url": "http://190.108.83.69:8000/play/a06s/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Comedy Central HD",
+    "url": "http://190.108.83.69:8000/play/a02z/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "DHE HD",
+    "url": "http://190.108.83.69:8000/play/a03v/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "DW Espanol",
+    "url": "http://190.108.83.69:8000/play/a01l/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "De PelŦcula",
+    "url": "http://190.108.83.69:8000/play/a06o/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Discovery Channel  HD",
+    "url": "http://190.108.83.69:8000/play/a044/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Discovery Kids HD",
+    "url": "http://190.108.83.69:8000/play/a0bn/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Discovery Science",
+    "url": "http://190.108.83.69:8000/play/a02b/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Discovery Theater HD",
+    "url": "http://190.108.83.69:8000/play/a03e/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Discovery Turbo",
+    "url": "http://190.108.83.69:8000/play/a026/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Discovery World HD",
+    "url": "http://190.108.83.69:8000/play/a036/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Disney HD",
+    "url": "http://190.108.83.69:8000/play/a04f/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Disney Junior",
+    "url": "http://190.108.83.69:8000/play/a025/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "E! Entertainment TV",
+    "url": "http://190.108.83.69:8000/play/a02c/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN 2 HD",
+    "url": "http://190.108.83.69:8000/play/a0an/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN 3 HD",
+    "url": "http://190.108.83.69:8000/play/a039/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN 4HD",
+    "url": "http://190.108.83.69:8000/play/a04h/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN 5HD",
+    "url": "http://190.108.83.69:8000/play/a032/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN 6HD",
+    "url": "http://190.108.83.69:8000/play/a02w/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN 7HD",
+    "url": "http://190.108.83.69:8000/play/a049/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN HD",
+    "url": "http://190.108.83.69:8000/play/a03s/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN HD",
+    "url": "http://190.108.83.69:8000/play/a08t/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ESPN Premium HD",
+    "url": "http://190.108.83.69:8000/play/a03w/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ETC",
+    "url": "http://190.108.83.69:8000/play/a08c/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "EWTN",
+    "url": "http://190.108.83.69:8000/play/a02h/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "El Gourmet HD",
+    "url": "http://190.108.83.69:8000/play/a030/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "El Trece",
+    "url": "http://190.108.83.69:8000/play/a01d/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Enlace",
+    "url": "http://190.108.83.69:8000/play/a02j/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Europa Europa",
+    "url": "http://190.108.83.69:8000/play/a00z/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Exitosa TV",
+    "url": "http://190.108.83.69:8000/play/a07s/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "FX HD",
+    "url": "http://190.108.83.69:8000/play/a04i/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Film&Arts",
+    "url": "http://190.108.83.69:8000/play/a00n/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Food Network",
+    "url": "http://190.108.83.69:8000/play/a08e/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "France 24",
+    "url": "http://190.108.83.69:8000/play/a01j/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "G DS",
+    "url": "http://190.108.83.69:8000/play/a0cb/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "G DS+",
+    "url": "http://190.108.83.69:8000/play/a05w/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "G LA KARIBEÑA",
+    "url": "http://190.108.83.69:8000/play/a0cd/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "GLOBAL",
+    "url": "http://190.108.83.69:8000/play/a01b/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Golden Edge",
+    "url": "http://190.108.83.69:8000/play/a00w/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Golden HD",
+    "url": "http://190.108.83.69:8000/play/a00i/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H A TRES SERIES HD",
+    "url": "http://190.108.83.69:8000/play/a0as/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H A&E MUNDO HD",
+    "url": "http://190.108.83.69:8000/play/a0aq/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H AMC HD",
+    "url": "http://190.108.83.69:8000/play/a09s/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H AMC SERIES",
+    "url": "http://190.108.83.69:8000/play/a091/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H AMERICA TV",
+    "url": "http://190.108.83.69:8000/play/a097/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H ANIMAL PLANET",
+    "url": "http://190.108.83.69:8000/play/a09v/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H ATV SUR HD",
+    "url": "http://190.108.83.69:8000/play/a0cq/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H ATV+ HD",
+    "url": "http://190.108.83.69:8000/play/a0cp/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H AXN HD",
+    "url": "http://190.108.83.69:8000/play/a0ar/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H CGTN SPANISH",
+    "url": "http://190.108.83.69:8000/play/a0ao/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H CINECANAL HD",
+    "url": "http://190.108.83.69:8000/play/a09w/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H CINEMAX HD",
+    "url": "http://190.108.83.69:8000/play/a0av/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H CNN SPANISH HD",
+    "url": "http://190.108.83.69:8000/play/a0au/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H D PELICULA",
+    "url": "http://190.108.83.69:8000/play/a0ay/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DHE HD",
+    "url": "http://190.108.83.69:8000/play/a0aw/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DISCOVERY CHANNEL HD",
+    "url": "http://190.108.83.69:8000/play/a09x/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DISCOVERY INVESTIGATION",
+    "url": "http://190.108.83.69:8000/play/a0a0/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DISCOVERY KIDS",
+    "url": "http://190.108.83.69:8000/play/a09r/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DISCOVERY SCIENCES",
+    "url": "http://190.108.83.69:8000/play/a0az/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DISCOVERY TURBO HD",
+    "url": "http://190.108.83.69:8000/play/a0a6/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DISNEY JUNIOR HD",
+    "url": "http://190.108.83.69:8000/play/a0a5/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H DW SPANISH",
+    "url": "http://190.108.83.69:8000/play/a0ak/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H Disney Channel HD",
+    "url": "http://190.108.83.69:8000/play/a09y/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H EWTN HD",
+    "url": "http://190.108.83.69:8000/play/a0b0/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H FOOD NETWORK HD",
+    "url": "http://190.108.83.69:8000/play/a0a3/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H FRANCE 24 HD",
+    "url": "http://190.108.83.69:8000/play/a0b2/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H FX HD",
+    "url": "http://190.108.83.69:8000/play/a09z/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H Film&Arts",
+    "url": "http://190.108.83.69:8000/play/a093/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H GLOBAL HD",
+    "url": "http://190.108.83.69:8000/play/a09b/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H GOLDEN HD",
+    "url": "http://190.108.83.69:8000/play/a0b3/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H GOURMET HD",
+    "url": "http://190.108.83.69:8000/play/a09t/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H HGTV",
+    "url": "http://190.108.83.69:8000/play/a0b4/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H HISTORY 2 HD",
+    "url": "http://190.108.83.69:8000/play/a0b5/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H HISTORY HD",
+    "url": "http://190.108.83.69:8000/play/a0b6/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H HTV HD",
+    "url": "http://190.108.83.69:8000/play/a0aj/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H Home & Health HD",
+    "url": "http://190.108.83.69:8000/play/a09u/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H KANAL DRAMA HD",
+    "url": "http://190.108.83.69:8000/play/a0b7/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H LAS ESTRELLAS HD",
+    "url": "http://190.108.83.69:8000/play/a0b8/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H LATELE HD",
+    "url": "http://190.108.83.69:8000/play/a0cr/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H LATINA HD",
+    "url": "http://190.108.83.69:8000/play/a09a/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H LIFETIME HD",
+    "url": "http://190.108.83.69:8000/play/a0b9/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H NATGEO HD",
+    "url": "http://190.108.83.69:8000/play/a0a1/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H PANAMERICANA TV",
+    "url": "http://190.108.83.69:8000/play/a098/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H PASIONES HD",
+    "url": "http://190.108.83.69:8000/play/a0bd/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H PLIM PLIM HD",
+    "url": "http://190.108.83.69:8000/play/a0be/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H SONY MOVIES HD",
+    "url": "http://190.108.83.69:8000/play/a0ag/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H SPACE HD",
+    "url": "http://190.108.83.69:8000/play/a0a7/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H STAR CHANNEL HD",
+    "url": "http://190.108.83.69:8000/play/a0a2/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H STUDIO UNIVERSAL HD",
+    "url": "http://190.108.83.69:8000/play/a0bg/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H TLC HD",
+    "url": "http://190.108.83.69:8000/play/a0a4/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H TNT SERIES HD",
+    "url": "http://190.108.83.69:8000/play/a0bi/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H TV PERU",
+    "url": "http://190.108.83.69:8000/play/a092/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "H UNIVERSAL CHANNEL HD",
+    "url": "http://190.108.83.69:8000/play/a0bj/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO Family HD",
+    "url": "http://190.108.83.69:8000/play/a03x/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO HD",
+    "url": "http://190.108.83.69:8000/play/a035/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO MUNDI",
+    "url": "http://190.108.83.69:8000/play/a01h/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO POP HD",
+    "url": "http://190.108.83.69:8000/play/a03k/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO Plus",
+    "url": "http://190.108.83.69:8000/play/a06b/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO Signature",
+    "url": "http://190.108.83.69:8000/play/a01g/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HBO XTREME HD",
+    "url": "http://190.108.83.69:8000/play/a03y/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HEI HD",
+    "url": "http://190.108.83.69:8000/play/a072/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HGTV",
+    "url": "http://190.108.83.69:8000/play/a02f/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HOLA TV HD",
+    "url": "http://190.108.83.69:8000/play/a073/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "HTV",
+    "url": "http://190.108.83.69:8000/play/a00q/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "History 2",
+    "url": "http://190.108.83.69:8000/play/a00j/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "History Channel HD",
+    "url": "http://190.108.83.69:8000/play/a045/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Home & Health HD",
+    "url": "http://190.108.83.69:8000/play/a08k/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "ID HD",
+    "url": "http://190.108.83.69:8000/play/a04d/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Kanal D Drama",
+    "url": "http://190.108.83.69:8000/play/a084/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "L1",
+    "url": "http://190.108.83.69:8000/play/a08s/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "L1 MAX",
+    "url": "http://190.108.83.69:8000/play/a083/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Las Estrellas HD",
+    "url": "http://190.108.83.69:8000/play/a09l/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Latina HD",
+    "url": "http://190.108.83.69:8000/play/a00g/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Lifetime",
+    "url": "http://190.108.83.69:8000/play/a02i/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Love Nature",
+    "url": "http://190.108.83.69:8000/play/a085/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "MEGA HD",
+    "url": "http://190.108.83.69:8000/play/a03m/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "MTV HD",
+    "url": "http://190.108.83.69:8000/play/a03a/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Movistar Deportes",
+    "url": "http://190.108.83.69:8000/play/a07o/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "NTN 24 Horas",
+    "url": "http://190.108.83.69:8000/play/a00r/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Nat Geo HD",
+    "url": "http://190.108.83.69:8000/play/a046/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Nick HD",
+    "url": "http://190.108.83.69:8000/play/a03l/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Nick Music",
+    "url": "http://190.108.83.69:8000/play/a00l/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Nuestra Tele",
+    "url": "http://190.108.83.69:8000/play/a00k/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "OROMAR TV",
+    "url": "http://190.108.83.69:8000/play/a017/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "POPU TV",
+    "url": "http://190.108.83.69:8000/play/a070/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Panamericana",
+    "url": "http://190.108.83.69:8000/play/a018/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Pasiones HD",
+    "url": "http://190.108.83.69:8000/play/a03h/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Playboy HD",
+    "url": "http://190.108.83.69:8000/play/a02p/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Plim Plim TV",
+    "url": "http://190.108.83.69:8000/play/a07n/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Plus TV Life",
+    "url": "http://190.108.83.69:8000/play/a086/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "R ALPHA",
+    "url": "http://190.108.83.69:8000/play/a09c/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "R CHARAPA TV",
+    "url": "http://190.108.83.69:8000/play/a067/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "R Estacion Tv",
+    "url": "http://190.108.83.69:8000/play/a07k/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "R Nex Tv",
+    "url": "http://190.108.83.69:8000/play/a06r/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "R PREMIUM GO",
+    "url": "http://190.108.83.69:8000/play/a082/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "R SELVATICA",
+    "url": "http://190.108.83.69:8000/play/a05y/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "RADIO BETHEL",
+    "url": "http://190.108.83.69:8000/play/a041/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "RADIO PBO",
+    "url": "http://190.108.83.69:8000/play/a042/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "RPP",
+    "url": "http://190.108.83.69:8000/play/a01a/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "SONY CHANNEL HD",
+    "url": "http://190.108.83.69:8000/play/a04a/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "STAR CHANNEL HD",
+    "url": "http://190.108.83.69:8000/play/a04j/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Sextreme",
+    "url": "http://190.108.83.69:8000/play/a0cj/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Sony Movies",
+    "url": "http://190.108.83.69:8000/play/a08j/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Space HD",
+    "url": "http://190.108.83.69:8000/play/a04e/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Stingray Concerts HD",
+    "url": "http://190.108.83.69:8000/play/a00d/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Studio Universal HD",
+    "url": "http://190.108.83.69:8000/play/a074/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Sun Channel HD",
+    "url": "http://190.108.83.69:8000/play/a03z/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "T NOVA TV",
+    "url": "http://190.108.83.69:8000/play/a07y/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "T PBO HD",
+    "url": "http://190.108.83.69:8000/play/a05r/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TCM",
+    "url": "http://190.108.83.69:8000/play/a00y/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TLC",
+    "url": "http://190.108.83.69:8000/play/a02a/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TNT HD",
+    "url": "http://190.108.83.69:8000/play/a047/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TNT Novelas HD",
+    "url": "http://190.108.83.69:8000/play/a038/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TNT Series HD",
+    "url": "http://190.108.83.69:8000/play/a034/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TNT Sports Premiun HD",
+    "url": "http://190.108.83.69:8000/play/a03i/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TVE",
+    "url": "http://190.108.83.69:8000/play/a08m/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TVN HD",
+    "url": "http://190.108.83.69:8000/play/a03f/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "TelefØ",
+    "url": "http://190.108.83.69:8000/play/a08l/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Telemundo",
+    "url": "http://190.108.83.69:8000/play/a02d/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Televicentro",
+    "url": "http://190.108.83.69:8000/play/a08b/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Tlnovelas",
+    "url": "http://190.108.83.69:8000/play/a06n/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Tooncast",
+    "url": "http://190.108.83.69:8000/play/a02e/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "UNIVERSAL CHANNEL HD",
+    "url": "http://190.108.83.69:8000/play/a031/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "USA",
+    "url": "http://190.108.83.69:8000/play/a00v/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Venus",
+    "url": "http://190.108.83.69:8000/play/a013/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Via X Esports",
+    "url": "http://190.108.83.69:8000/play/a00u/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Warner Channel HD",
+    "url": "http://190.108.83.69:8000/play/a04b/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "Willax",
+    "url": "http://190.108.83.69:8000/play/a07t/index.m3u8",
+    "type": "m3u8",
+    "group": "-"
+  },
+  {
+    "name": "tycsports",
+    "url": "https://eWVz.fubo18.com:443/tycsports/mono.m3u8?token=10ddc5bb7a0aa706e524b71c8033b81cbf5d09dc-c9-1784608952-1784590952",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "foxsports",
+    "url": "https://cgxheq.fubo18.com:443/foxsports/mono.m3u8?token=ee391f55d533315f15f5bd050ade7c0a0edd1320-8-1784608955-1784590955",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "foxsports2",
+    "url": "https://YXdlc29tZQ.fubo18.com:443/foxsports2/mono.m3u8?token=3c38ab9d723066690cc1cf53cbd8f94e69568395-4e-1784608957-1784590957",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "dsports",
+    "url": "https://a2lja3m.fubo18.com:443/dsports/mono.m3u8?token=8f587cf9c0a056abce43e9cd86bd06d0a8be062e-63-1784608958-1784590958",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "winsports",
+    "url": "https://am91cm5leQ.fubo18.com:443/winsports/mono.m3u8?token=88c3a76519948e00258fa959a96a4a3031a4b5cc-2f-1784608960-1784590960",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "winsports2",
+    "url": "https://c2nvdxq.fubo18.com:443/winsports2/mono.m3u8?token=357ec8a63094f2784e8f3e21641d2d191d68d3e6-8c-1784608962-1784590962",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "telefe",
+    "url": "https://b2ZmaWNpYWw.fubo18.com:443/telefe/mono.m3u8?token=1ab828c211fba328a51995ffad6ba4d10293a6d6-58-1784608964-1784590964",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "canal5",
+    "url": "https://dglvz29s.fubo18.com:443/canal5/mono.m3u8?token=6f97e29703c11862e03f783330e67ce99000c450-22-1784608966-1784590966",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "caracol",
+    "url": "https://b2ZmaWNpYWw.fubo18.com:443/caracol/mono.m3u8?token=f12373a8eca0e5d17b92fcc40f2327ef9ea09404-f5-1784608968-1784590968",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "espnpremium",
+    "url": "https://bmf0aw9u.fubo18.com:443/espnpremium/mono.m3u8?token=7a7b31128c919c213fc30fb086ee3c513592bb20-79-1784608970-1784590970",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "premiere2",
+    "url": "https://y2fzdgxl.fubo18.com:443/premiere2/mono.m3u8?token=a96cacb4e474017670c78d6d5804afb1dd392674-e3-1784608972-1784590972",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "premiere3",
+    "url": "https://cgxheq.fubo18.com:443/premiere3/mono.m3u8?token=2c729c4b088c9029b879998be790ebf85fa46e25-2d-1784608973-1784590973",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "premiere4",
+    "url": "https://y2fzdgxl.fubo18.com:443/premiere4/mono.m3u8?token=41e716a2637c8cbff8e65e401db844c8b2348d17-57-1784608975-1784590975",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "liga1max",
+    "url": "https://cgxheq.fubo18.com:443/liga1max/mono.m3u8?token=abbd43c953ac4072f7760d8a470dc2912a583c7d-fa-1784608977-1784590977",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "tntsports",
+    "url": "https://dw5pdgvk.fubo18.com:443/tntsports/mono.m3u8?token=cf12d7481102c852acf85a4449a2a495989c75fa-dd-1784608979-1784590979",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "sportv",
+    "url": "https://a2lja3m.fubo18.com:443/sportv/mono.m3u8?token=c80f356cf3c3394871e87ef7d313e5a1c896366b-f5-1784608981-1784590981",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "sportv2",
+    "url": "https://cgxheq.fubo18.com:443/sportv2/mono.m3u8?token=319edf40686d929f1ff88d0e7f49ac8f1ef9293b-15-1784608983-1784590983",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "americatv",
+    "url": "https://c2f2zq.fubo18.com:443/americatv/mono.m3u8?token=3dd27779f9ba0c6e86455062d56b143eebe78ab4-14-1784608984-1784590984",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "univision",
+    "url": "https://YXdlc29tZQ.fubo18.com:443/univision/mono.m3u8?token=2eb1822460cddfe66bcc6e8a0428f36f02d54b2c-4e-1784608987-1784590987",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "tudn",
+    "url": "https://c2nvdxq.fubo18.com:443/tudn/mono.m3u8?token=246f02b67b2f95fac6246f62023edefdd5ddea8d-fb-1784608988-1784590988",
+    "type": "m3u8",
+    "group": "la20hd"
+  },
+  {
+    "name": "tycsports",
+    "url": "https://cxm2.futbolonlinehd.com:443/tycsports/mono.m3u8?token=6c9c0c903d8b20ca900e1471b4bd0b1f2913cb45-67-1784608989-1784590989",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "foxsports",
+    "url": "https://cxm9.futbolonlinehd.com:443/foxsports/mono.m3u8?token=afbf15c5b42c00aa1a7b6ab5831ae5a60c372e0e-18-1784608990-1784590990",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "foxsports2",
+    "url": "https://cxm1.futbolonlinehd.com:443/foxsports2/mono.m3u8?token=097659473227170ecbc1d045602946516a3ad63f-1c-1784608991-1784590991",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "dsports",
+    "url": "https://cxm10.futbolonlinehd.com:443/dsports/mono.m3u8?token=f241726594b593c311e171535432202d12739a34-70-1784608992-1784590992",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "winsports",
+    "url": "https://cxm10.futbolonlinehd.com:443/winsports/mono.m3u8?token=443b451181c2538789f48270a1459a23425b62bf-de-1784608993-1784590993",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "winsports2",
+    "url": "https://cxm1.futbolonlinehd.com:443/winsports2/mono.m3u8?token=de45bc4e4cc6e9101cfbba1bd1e6929337501bf7-c3-1784608993-1784590993",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "telefe",
+    "url": "https://cxm10.futbolonlinehd.com:443/telefe/mono.m3u8?token=c3bdf462b882355b1948ec270e4fca695d326a11-65-1784608994-1784590994",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "canal5",
+    "url": "https://cxm3.futbolonlinehd.com:443/canal5/mono.m3u8?token=011099b3e244b275609491c1aaf6558c49bd80f4-d1-1784608995-1784590995",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "caracol",
+    "url": "https://cxm3.futbolonlinehd.com:443/caracol/mono.m3u8?token=ae0d16ed43b50a524d2937d27ad5af9677ac0733-ef-1784608996-1784590996",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "espnpremium",
+    "url": "https://cxm5.futbolonlinehd.com:443/espnpremium/mono.m3u8?token=73e2167f4d2d396699d85c109926e97d47876c64-c9-1784608997-1784590997",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "premiere2",
+    "url": "https://cxm8.futbolonlinehd.com:443/premiere2/mono.m3u8?token=1d53b3ba048c24c92850b9298a086991316fcfec-cc-1784608998-1784590998",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "premiere3",
+    "url": "https://cxm9.futbolonlinehd.com:443/premiere3/mono.m3u8?token=9bc9d18bff05900d568c004f664645fba3b858ed-69-1784608998-1784590998",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "premiere4",
+    "url": "https://cxm6.futbolonlinehd.com:443/premiere4/mono.m3u8?token=b5f6c7b0e9b2c8c43e5b5b2b66beccd6a94b3dc3-dc-1784608999-1784590999",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "liga1max",
+    "url": "https://cxm7.futbolonlinehd.com:443/liga1max/mono.m3u8?token=a2b17a892c21852df64e48bc5189572d899468b8-a9-1784609000-1784591000",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "tntsports",
+    "url": "https://cxm2.futbolonlinehd.com:443/tntsports/mono.m3u8?token=f35357183f56a64f83627c03c2bcdf9e569980b1-d0-1784609001-1784591001",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "sportv",
+    "url": "https://cxm4.futbolonlinehd.com:443/sportv/mono.m3u8?token=ad28c7d927188da944e4f13de7f75e9ace8d5874-b4-1784609002-1784591002",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "sportv2",
+    "url": "https://cxm10.futbolonlinehd.com:443/sportv2/mono.m3u8?token=9c3289b0dd0dc473adc536a0e133fa6cc19af9be-cb-1784609003-1784591003",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "americatv",
+    "url": "https://cxm7.futbolonlinehd.com:443/americatv/mono.m3u8?token=4873d26efed1ed5b8059b74c69a809ba855a2266-7-1784609004-1784591004",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "univision",
+    "url": "https://cxm1.futbolonlinehd.com:443/univision/mono.m3u8?token=9d26fc3696a85eca745438fcdd856b2d95fed5d4-73-1784609004-1784591004",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "tudn",
+    "url": "https://cxm7.futbolonlinehd.com:443/tudn/mono.m3u8?token=6b861a29faef93531f208bc7504f1e3e297b9642-17-1784609005-1784591005",
+    "type": "m3u8",
+    "group": "fltvhd"
+  },
+  {
+    "name": "Canal 4 Uruguay",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/Canal4_URU/SA_Live_dash_enc/Canal4_URU.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Canal 10 Uruguay",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/Canal10_URU/SA_Live_dash_enc/Canal10_URU.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Canal 26",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds//SA_Live_dash_enc/.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "A24",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/America24/SA_Live_dash_enc/America24.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "America Tv",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/AmericaTV/SA_Live_dash_enc/AmericaTV.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "C5n",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/C5N/SA_Live_dash_enc/C5N.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Cronicatv",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/CronicaTV/SA_Live_dash_enc/CronicaTV.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Tn",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/TodoNoticias/SA_Live_dash_enc/TodoNoticias.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Disney Channel",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/DisneyChannelHD/SA_Live_dash_enc/DisneyChannelHD.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBOHD/SA_Live_dash_enc/HBOHD.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo 2",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_2/SA_Live_dash_enc/HBO_2.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo Plus",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_Plus/SA_Live_dash_enc/HBO_Plus.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo Family",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_Family/SA_Live_dash_enc/HBO_Family.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo Mundi",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_Mundi/SA_Live_dash_enc/HBO_Mundi.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo Xtreme",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_Extreme/SA_Live_dash_enc/HBO_Extreme.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo Pop",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_POP/SA_Live_dash_enc/HBO_POP.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Hbo Signature",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HBO_Signature/SA_Live_dash_enc/HBO_Signature.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "History",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/HistoryHD/SA_Live_dash_enc/HistoryHD.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "National Geographic",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/NatGeoHD/SA_Live_dash_enc/NatGeoHD.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Animal Planet",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/AnimalPlanet/SA_Live_dash_enc/AnimalPlanet.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Cartoon Network",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/CartoonNetwork/SA_Live_dash_enc/CartoonNetwork.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Mtv",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/MTV_HD/SA_Live_dash_enc/MTV_HD.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Nick",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/Nickelodeon/SA_Live_dash_enc/Nickelodeon.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Nickjr",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/Nick_Jr/SA_Live_dash_enc/Nick_Jr.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Tnt",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds//SA_Live_dash_enc/.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Tnt Series",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/TNTSeries/SA_Live_dash_enc/TNTSeries.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Tnt Novelas",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/TBS/SA_Live_dash_enc/TBS.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Sony Channel",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/SonyHD/SA_Live_dash_enc/SonyHD.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  },
+  {
+    "name": "Cm",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/CM/SA_Live_dash_enc/CM.mpd",
+    "type": "mpd",
+    "group": "TLF-MPD"
+  }
+]
