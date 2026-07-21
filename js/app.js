@@ -51,8 +51,8 @@ async function playChannel(encodedUrl) {
   
   destroyPlayer();
   
-  if (ch.type === 'mpd') {
-    // MPD -> usar iframe para telelibrefull (ahi funciona con la extension Chrome)
+  if (ch.type === 'mpd' || ch.type === 'iframe') {
+    // MPD/iframe -> cargar el tok.html que usa la extension Chrome
     await playIframe(ch);
   } else {
     // M3U8/TS -> usar video player con hls.js
@@ -85,15 +85,8 @@ async function playIframe(ch) {
   const iframe = document.getElementById('iframe-player');
   iframe.classList.remove('hidden');
   
-  // Si es de telelibrefull, usar la pagina original
-  let src = ch.url;
-  // Si la URL es un MPD directo, buscar la pagina de telelibrefull correspondiente
-  if (src.includes('cvattv.com.ar') || src.endsWith('.mpd')) {
-    const name = ch.name.toLowerCase().replace(/\s+/g, '-');
-    src = `https://telelibrefull.online/en-vivo/${name}/`;
-  }
-  
-  iframe.src = src;
+  // Usar la URL directa del iframe (tok.html para MPD/bestleague.top)
+  iframe.src = ch.url;
   document.getElementById('loading-msg').classList.add('hidden');
 }
 
