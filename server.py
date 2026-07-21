@@ -60,22 +60,17 @@ def api_mpd():
     kid = key_m.group(1) if key_m else ''
     k = key_m.group(2) if key_m else ''
     
-    for sel in mt:
-        mpd_url = f"https://{sel['cdn']}.cvattv.com.ar/{sel['token']}/live/c{num}eds/{name_decoded}/SA_Live_dash_enc/{name_decoded}.mpd"
-        try:
-            req = urllib.request.Request(mpd_url, headers={'User-Agent': 'Mozilla/5.0'})
-            resp = urllib.request.urlopen(req, timeout=5, context=SSL_CTX)
-            if resp.status == 200 and b'<MPD' in resp.read(500):
-                ch_name = name_decoded
-                for ch in CHANNELS:
-                    if ch.get('b64') == b64:
-                        ch_name = ch['name']
-                        break
-                return jsonify({"name": ch_name, "url": mpd_url, "type": "mpd", "keyId": kid, "key": k})
-        except:
-            continue
+    # Return first CDN without testing (CDN blocks cloud IPs but works from home)
+    sel = mt[0]
+    mpd_url = f"https://{sel['cdn']}.cvattv.com.ar/{sel['token']}/live/c{num}eds/{name_decoded}/SA_Live_dash_enc/{name_decoded}.mpd"
     
-    return jsonify({"error": "all CDNs failed"})
+    ch_name = name_decoded
+    for ch in CHANNELS:
+        if ch.get('b64') == b64:
+            ch_name = ch['name']
+            break
+    
+    return jsonify({"name": ch_name, "url": mpd_url, "type": "mpd", "keyId": kid, "key": k})
 
 @app.route('/')
 def index():
