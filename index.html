@@ -38,7 +38,7 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
 </div>
 
 <script>
-let cc=[],hls=null,au=null,shp=null;
+let cc=[],hls=null,au=null,shp=null,apiBase='/api';
 
 async function load(){
   try{
@@ -48,7 +48,7 @@ async function load(){
     document.getElementById('c').textContent=cc.length+' canales';
     document.getElementById('l').onclick=e=>{
       let el=e.target.closest('.c');
-      if(el)play(el.dataset.url);
+      if(el)play(el.dataset.idx);
     };
     render();
     shaka.polyfill.installAll();
@@ -58,64 +58,63 @@ async function load(){
 function render(){
   let q=(document.getElementById('l').querySelector('input')||{}).value||'';
   let f=q?cc.filter(c=>c.name.toLowerCase().includes(q)):cc;
-  document.getElementById('l').innerHTML=(f.length?f.map(c=>
-    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='mpd'?'t2':'t1'}">${c.type==='mpd'?'D':'H'}</span></div>`
-  ).join(''):'Sin resultados')+
+  document.getElementById('l').innerHTML=(f.length?f.map((c,i)=>{
+    let idx=cc.indexOf(c);
+    return `<div class="c ${au===idx?'on':''}" data-idx="${idx}"><span>${c.name}</span><span class="t ${c.type==='mpd'?'t2':'t1'}">${c.type==='mpd'?'D':'H'}</span></div>`;
+  }).join(''):'Sin resultados')+
   '<input placeholder="Buscar..." oninput="render()" style="margin-top:6px;width:100%;padding:5px;border-radius:4px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;font-size:11px;outline:none">';
 }
 
-function play(u){
-  let ch=cc.find(c=>c.url===u);
-  if(!ch)return;
-  au=u;render();
-  document.getElementById('n').textContent='▶ '+ch.name;
-  document.getElementById('r').textContent='Cargando...';
+async function play(idx){
+  au=parseInt(idx);
+  render();
+  document.getElementById('n').textContent='▶ '+cc[au].name;
+  document.getElementById('r').textContent='Conectando...';
   
   if(hls){hls.destroy();hls=null}
   if(shp){shp.destroy();shp=null}
   let v=document.getElementById('v');
   v.pause();v.src='';v.load();
   
-  setTimeout(()=>{
-    if(document.getElementById('r').textContent==='Cargando...'){
-      document.getElementById('r').textContent='❌ Timeout';
-    }
-  },20000);
-  
-  if(ch.type==='mpd') loadMPD(ch,v);
-  else loadHLS(ch,v);
+  try{
+    let ch=cc[au];
+    let endpoint;
+    if(ch.type==='mpd') endpoint=`${apiBase}/mpd?b64=${ch.b64}`;
+    else endpoint=`${apiBase}/hls?name=${ch.hls_name}`;
+    
+    let r=await fetch(endpoint);
+    let data=await r.json();
+    
+    if(data.error){document.getElementById('r').textContent='❌ '+data.error;return;}
+    
+    if(data.type==='mpd') await loadMPD(data,v);
+    else loadHLS(data,v);
+  }catch(e){document.getElementById('r').textContent='❌ Error';}
 }
 
-function loadHLS(ch,v){
+function loadHLS(data,v){
   if(Hls&&Hls.isSupported()){
     hls=new Hls({enableWorker:false});
-    hls.loadSource(ch.url);
+    hls.loadSource(data.url);
     hls.attachMedia(v);
     hls.on(Hls.Events.MANIFEST_PARSED,()=>{
       v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
     });
     hls.on(Hls.Events.ERROR,(_,d)=>{if(d.fatal)document.getElementById('r').textContent='❌ Error'});
-  }else{v.src=ch.url;v.play().then(()=>document.getElementById('r').textContent='▶ OK');}
+  }else{v.src=data.url;v.play().then(()=>document.getElementById('r').textContent='▶ OK');}
 }
 
-async function loadMPD(ch,v){
-  if(!shaka.Player.isBrowserSupported()){
-    document.getElementById('r').textContent='❌ No soportado';return;
-  }
+async function loadMPD(data,v){
+  if(!shaka.Player.isBrowserSupported()){document.getElementById('r').textContent='❌ No soportado';return;}
   try{
     let p=new shaka.Player();shp=p;
     await p.attach(v);
     let cfg={manifest:{dash:{ignoreMinBufferTime:true}}};
-    if(ch.keyId&&ch.key){
-      cfg.drm={clearKeys:{}};
-      cfg.drm.clearKeys[ch.keyId]=ch.key;
-    }
+    if(data.keyId&&data.key){cfg.drm={clearKeys:{[data.keyId]:data.key}};}
     p.configure(cfg);
-    await p.load(ch.url);
+    await p.load(data.url);
     v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
-  }catch(e){
-    document.getElementById('r').textContent='❌ Error';
-  }
+  }catch(e){document.getElementById('r').textContent='❌ Error';}
 }
 
 load();

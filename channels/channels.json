@@ -1,244 +1,213 @@
 [
   {
     "name": "Canal 4 Uruguay",
-    "b64": "Q2FuYWw0X1VSVQ==",
     "type": "mpd",
-    "url": "",
+    "b64": "Q2FuYWw0X1VSVQ==",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Canal 10 Uruguay",
-    "b64": "Q2FuYWwxMF9VUlU=",
     "type": "mpd",
-    "url": "",
+    "b64": "Q2FuYWwxMF9VUlU=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Teledoce",
-    "b64": "Q2FuYWwxMlVSVQ==",
     "type": "mpd",
-    "url": "",
+    "b64": "Q2FuYWwxMlVSVQ==",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "A24",
-    "b64": "QW1lcmljYTI0",
     "type": "mpd",
-    "url": "",
+    "b64": "QW1lcmljYTI0",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "America TV",
-    "b64": "QW1lcmljYVRW",
     "type": "mpd",
-    "url": "",
+    "b64": "QW1lcmljYVRW",
     "keyId": "8ea235ce0826408b221c498115a9b62d",
     "key": "7aa9266ed91ea4510483370029dfcf45"
   },
   {
     "name": "C5N",
-    "b64": "QzVO",
     "type": "mpd",
-    "url": "",
+    "b64": "QzVO",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Cronica TV",
-    "b64": "Q3JvbmljYVRW",
     "type": "mpd",
-    "url": "",
+    "b64": "Q3JvbmljYVRW",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "TN",
-    "b64": "VG9kb05vdGljaWFz",
     "type": "mpd",
-    "url": "",
+    "b64": "VG9kb05vdGljaWFz",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Disney Channel",
-    "b64": "RGlzbmV5Q2hhbm5lbEhE",
     "type": "mpd",
-    "url": "",
+    "b64": "RGlzbmV5Q2hhbm5lbEhE",
     "keyId": "4a742e478d14023e1993e011d9415f94",
     "key": "0df77ede9bc744376836d21afa137dda"
   },
   {
     "name": "HBO",
-    "b64": "SEJPSEQ=",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPSEQ=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO 2",
-    "b64": "SEJPXzI=",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPXzI=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO Plus",
-    "b64": "SEJPX1BsdXM=",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPX1BsdXM=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO Family",
-    "b64": "SEJPX0ZhbWlseQ==",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPX0ZhbWlseQ==",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO Mundi",
-    "b64": "SEJPX011bmRp",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPX011bmRp",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO Xtreme",
-    "b64": "SEJPX0V4dHJlbWU=",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPX0V4dHJlbWU=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO Pop",
-    "b64": "SEJPX1BPUA==",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPX1BPUA==",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "HBO Signature",
-    "b64": "SEJPX1NpZ25hdHVyZQ==",
     "type": "mpd",
-    "url": "",
+    "b64": "SEJPX1NpZ25hdHVyZQ==",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "History",
-    "b64": "SGlzdG9yeUhE",
     "type": "mpd",
-    "url": "",
+    "b64": "SGlzdG9yeUhE",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Nat Geo",
-    "b64": "TmF0R2VvSEQ=",
     "type": "mpd",
-    "url": "",
+    "b64": "TmF0R2VvSEQ=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Animal Planet",
-    "b64": "QW5pbWFsUGxhbmV0",
     "type": "mpd",
-    "url": "",
+    "b64": "QW5pbWFsUGxhbmV0",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Cartoon Network",
-    "b64": "Q2FydG9vbk5ldHdvcms=",
     "type": "mpd",
-    "url": "",
+    "b64": "Q2FydG9vbk5ldHdvcms=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "MTV",
-    "b64": "TVRWX0hE",
     "type": "mpd",
-    "url": "",
+    "b64": "TVRWX0hE",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Nick",
-    "b64": "Tmlja2Vsb2Rlb24=",
     "type": "mpd",
-    "url": "",
+    "b64": "Tmlja2Vsb2Rlb24=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Nick Jr",
-    "b64": "Tmlja19Kcg==",
     "type": "mpd",
-    "url": "",
+    "b64": "Tmlja19Kcg==",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "TNT Series",
-    "b64": "VE5UU2VyaWVz",
     "type": "mpd",
-    "url": "",
+    "b64": "VE5UU2VyaWVz",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "TNT Novelas",
-    "b64": "VEJT",
     "type": "mpd",
-    "url": "",
+    "b64": "VEJT",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "Sony Channel",
-    "b64": "U29ueUhE",
     "type": "mpd",
-    "url": "",
+    "b64": "U29ueUhE",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "CM",
-    "b64": "Q00=",
     "type": "mpd",
-    "url": "",
+    "b64": "Q00=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
     "name": "DSports",
     "type": "m3u8",
-    "url": "",
-    "la20hd": "dsports"
+    "hls_name": "dsports"
   },
   {
     "name": "Telefe",
     "type": "m3u8",
-    "url": "",
-    "la20hd": "telefe"
+    "hls_name": "telefe"
   },
   {
     "name": "WinSports",
     "type": "m3u8",
-    "url": "",
-    "la20hd": "winsports"
+    "hls_name": "winsports"
   }
 ]
