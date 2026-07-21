@@ -1,393 +1,29 @@
 [
   {
-    "name": "tycsports",
-    "url": "https://eWVz.fubo18.com:443/tycsports/mono.m3u8?token=10ddc5bb7a0aa706e524b71c8033b81cbf5d09dc-c9-1784608952-1784590952",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "foxsports",
-    "url": "https://cgxheq.fubo18.com:443/foxsports/mono.m3u8?token=ee391f55d533315f15f5bd050ade7c0a0edd1320-8-1784608955-1784590955",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "foxsports2",
-    "url": "https://YXdlc29tZQ.fubo18.com:443/foxsports2/mono.m3u8?token=3c38ab9d723066690cc1cf53cbd8f94e69568395-4e-1784608957-1784590957",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "dsports",
-    "url": "https://a2lja3m.fubo18.com:443/dsports/mono.m3u8?token=8f587cf9c0a056abce43e9cd86bd06d0a8be062e-63-1784608958-1784590958",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "winsports",
-    "url": "https://am91cm5leQ.fubo18.com:443/winsports/mono.m3u8?token=88c3a76519948e00258fa959a96a4a3031a4b5cc-2f-1784608960-1784590960",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "winsports2",
-    "url": "https://c2nvdxq.fubo18.com:443/winsports2/mono.m3u8?token=357ec8a63094f2784e8f3e21641d2d191d68d3e6-8c-1784608962-1784590962",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "telefe",
-    "url": "https://b2ZmaWNpYWw.fubo18.com:443/telefe/mono.m3u8?token=1ab828c211fba328a51995ffad6ba4d10293a6d6-58-1784608964-1784590964",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "canal5",
-    "url": "https://dglvz29s.fubo18.com:443/canal5/mono.m3u8?token=6f97e29703c11862e03f783330e67ce99000c450-22-1784608966-1784590966",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "caracol",
-    "url": "https://b2ZmaWNpYWw.fubo18.com:443/caracol/mono.m3u8?token=f12373a8eca0e5d17b92fcc40f2327ef9ea09404-f5-1784608968-1784590968",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "espnpremium",
-    "url": "https://bmf0aw9u.fubo18.com:443/espnpremium/mono.m3u8?token=7a7b31128c919c213fc30fb086ee3c513592bb20-79-1784608970-1784590970",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "premiere2",
-    "url": "https://y2fzdgxl.fubo18.com:443/premiere2/mono.m3u8?token=a96cacb4e474017670c78d6d5804afb1dd392674-e3-1784608972-1784590972",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "premiere3",
-    "url": "https://cgxheq.fubo18.com:443/premiere3/mono.m3u8?token=2c729c4b088c9029b879998be790ebf85fa46e25-2d-1784608973-1784590973",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "premiere4",
-    "url": "https://y2fzdgxl.fubo18.com:443/premiere4/mono.m3u8?token=41e716a2637c8cbff8e65e401db844c8b2348d17-57-1784608975-1784590975",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "liga1max",
-    "url": "https://cgxheq.fubo18.com:443/liga1max/mono.m3u8?token=abbd43c953ac4072f7760d8a470dc2912a583c7d-fa-1784608977-1784590977",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "tntsports",
-    "url": "https://dw5pdgvk.fubo18.com:443/tntsports/mono.m3u8?token=cf12d7481102c852acf85a4449a2a495989c75fa-dd-1784608979-1784590979",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "sportv",
-    "url": "https://a2lja3m.fubo18.com:443/sportv/mono.m3u8?token=c80f356cf3c3394871e87ef7d313e5a1c896366b-f5-1784608981-1784590981",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "sportv2",
-    "url": "https://cgxheq.fubo18.com:443/sportv2/mono.m3u8?token=319edf40686d929f1ff88d0e7f49ac8f1ef9293b-15-1784608983-1784590983",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "americatv",
-    "url": "https://c2f2zq.fubo18.com:443/americatv/mono.m3u8?token=3dd27779f9ba0c6e86455062d56b143eebe78ab4-14-1784608984-1784590984",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "univision",
-    "url": "https://YXdlc29tZQ.fubo18.com:443/univision/mono.m3u8?token=2eb1822460cddfe66bcc6e8a0428f36f02d54b2c-4e-1784608987-1784590987",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "tudn",
-    "url": "https://c2nvdxq.fubo18.com:443/tudn/mono.m3u8?token=246f02b67b2f95fac6246f62023edefdd5ddea8d-fb-1784608988-1784590988",
-    "type": "m3u8",
-    "group": "la20hd"
-  },
-  {
-    "name": "tycsports",
-    "url": "https://cxm2.futbolonlinehd.com:443/tycsports/mono.m3u8?token=6c9c0c903d8b20ca900e1471b4bd0b1f2913cb45-67-1784608989-1784590989",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "foxsports",
-    "url": "https://cxm9.futbolonlinehd.com:443/foxsports/mono.m3u8?token=afbf15c5b42c00aa1a7b6ab5831ae5a60c372e0e-18-1784608990-1784590990",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "foxsports2",
-    "url": "https://cxm1.futbolonlinehd.com:443/foxsports2/mono.m3u8?token=097659473227170ecbc1d045602946516a3ad63f-1c-1784608991-1784590991",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "dsports",
-    "url": "https://cxm10.futbolonlinehd.com:443/dsports/mono.m3u8?token=f241726594b593c311e171535432202d12739a34-70-1784608992-1784590992",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "winsports",
-    "url": "https://cxm10.futbolonlinehd.com:443/winsports/mono.m3u8?token=443b451181c2538789f48270a1459a23425b62bf-de-1784608993-1784590993",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "winsports2",
-    "url": "https://cxm1.futbolonlinehd.com:443/winsports2/mono.m3u8?token=de45bc4e4cc6e9101cfbba1bd1e6929337501bf7-c3-1784608993-1784590993",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "telefe",
-    "url": "https://cxm10.futbolonlinehd.com:443/telefe/mono.m3u8?token=c3bdf462b882355b1948ec270e4fca695d326a11-65-1784608994-1784590994",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "canal5",
-    "url": "https://cxm3.futbolonlinehd.com:443/canal5/mono.m3u8?token=011099b3e244b275609491c1aaf6558c49bd80f4-d1-1784608995-1784590995",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "caracol",
-    "url": "https://cxm3.futbolonlinehd.com:443/caracol/mono.m3u8?token=ae0d16ed43b50a524d2937d27ad5af9677ac0733-ef-1784608996-1784590996",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "espnpremium",
-    "url": "https://cxm5.futbolonlinehd.com:443/espnpremium/mono.m3u8?token=73e2167f4d2d396699d85c109926e97d47876c64-c9-1784608997-1784590997",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "premiere2",
-    "url": "https://cxm8.futbolonlinehd.com:443/premiere2/mono.m3u8?token=1d53b3ba048c24c92850b9298a086991316fcfec-cc-1784608998-1784590998",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "premiere3",
-    "url": "https://cxm9.futbolonlinehd.com:443/premiere3/mono.m3u8?token=9bc9d18bff05900d568c004f664645fba3b858ed-69-1784608998-1784590998",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "premiere4",
-    "url": "https://cxm6.futbolonlinehd.com:443/premiere4/mono.m3u8?token=b5f6c7b0e9b2c8c43e5b5b2b66beccd6a94b3dc3-dc-1784608999-1784590999",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "liga1max",
-    "url": "https://cxm7.futbolonlinehd.com:443/liga1max/mono.m3u8?token=a2b17a892c21852df64e48bc5189572d899468b8-a9-1784609000-1784591000",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "tntsports",
-    "url": "https://cxm2.futbolonlinehd.com:443/tntsports/mono.m3u8?token=f35357183f56a64f83627c03c2bcdf9e569980b1-d0-1784609001-1784591001",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "sportv",
-    "url": "https://cxm4.futbolonlinehd.com:443/sportv/mono.m3u8?token=ad28c7d927188da944e4f13de7f75e9ace8d5874-b4-1784609002-1784591002",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "sportv2",
-    "url": "https://cxm10.futbolonlinehd.com:443/sportv2/mono.m3u8?token=9c3289b0dd0dc473adc536a0e133fa6cc19af9be-cb-1784609003-1784591003",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "americatv",
-    "url": "https://cxm7.futbolonlinehd.com:443/americatv/mono.m3u8?token=4873d26efed1ed5b8059b74c69a809ba855a2266-7-1784609004-1784591004",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "univision",
-    "url": "https://cxm1.futbolonlinehd.com:443/univision/mono.m3u8?token=9d26fc3696a85eca745438fcdd856b2d95fed5d4-73-1784609004-1784591004",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "tudn",
-    "url": "https://cxm7.futbolonlinehd.com:443/tudn/mono.m3u8?token=6b861a29faef93531f208bc7504f1e3e297b9642-17-1784609005-1784591005",
-    "type": "m3u8",
-    "group": "fltvhd"
-  },
-  {
-    "name": "Canal 4 Uruguay",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c4eds/Canal4_URU/SA_Live_dash_enc/Canal4_URU.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Canal 10 Uruguay",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c4eds/Canal10_URU/SA_Live_dash_enc/Canal10_URU.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "A24",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/America24/SA_Live_dash_enc/America24.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "America Tv",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/AmericaTV/SA_Live_dash_enc/AmericaTV.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "8ea235ce0826408b221c498115a9b62d",
-    "key": "7aa9266ed91ea4510483370029dfcf45"
-  },
-  {
-    "name": "C5n",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/C5N/SA_Live_dash_enc/C5N.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Cronicatv",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/CronicaTV/SA_Live_dash_enc/CronicaTV.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Tn",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/TodoNoticias/SA_Live_dash_enc/TodoNoticias.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
     "name": "Disney Channel",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/DisneyChannelHD/SA_Live_dash_enc/DisneyChannelHD.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
     "keyId": "4a742e478d14023e1993e011d9415f94",
     "key": "0df77ede9bc744376836d21afa137dda"
   },
   {
-    "name": "Hbo",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c4eds/HBOHD/SA_Live_dash_enc/HBOHD.mpd",
+    "name": "C5N",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/C5N/SA_Live_dash_enc/C5N.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
-    "name": "Hbo 2",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/HBO_2/SA_Live_dash_enc/HBO_2.mpd",
+    "name": "America TV",
+    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/AmericaTV/SA_Live_dash_enc/AmericaTV.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "keyId": "8ea235ce0826408b221c498115a9b62d",
+    "key": "7aa9266ed91ea4510483370029dfcf45"
   },
   {
-    "name": "Hbo Plus",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/HBO_Plus/SA_Live_dash_enc/HBO_Plus.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Hbo Family",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/HBO_Family/SA_Live_dash_enc/HBO_Family.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Hbo Mundi",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/HBO_Mundi/SA_Live_dash_enc/HBO_Mundi.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Hbo Xtreme",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/HBO_Extreme/SA_Live_dash_enc/HBO_Extreme.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Hbo Pop",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/HBO_POP/SA_Live_dash_enc/HBO_POP.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Hbo Signature",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/HBO_Signature/SA_Live_dash_enc/HBO_Signature.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "History",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/HistoryHD/SA_Live_dash_enc/HistoryHD.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "National Geographic",
+    "name": "Nat Geo",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/NatGeoHD/SA_Live_dash_enc/NatGeoHD.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Animal Planet",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/AnimalPlanet/SA_Live_dash_enc/AnimalPlanet.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
@@ -395,15 +31,6 @@
     "name": "Cartoon Network",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/CartoonNetwork/SA_Live_dash_enc/CartoonNetwork.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Mtv",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/MTV_HD/SA_Live_dash_enc/MTV_HD.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
@@ -411,48 +38,29 @@
     "name": "Nick",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/Nickelodeon/SA_Live_dash_enc/Nickelodeon.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
-    "name": "Nickjr",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/Nick_Jr/SA_Live_dash_enc/Nick_Jr.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Tnt Series",
+    "name": "TNT Series",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/TNTSeries/SA_Live_dash_enc/TNTSeries.mpd",
     "type": "mpd",
-    "group": "TLF-MPD",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
-    "name": "Tnt Novelas",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/TBS/SA_Live_dash_enc/TBS.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "name": "DSPORTS",
+    "url": "https://eWVz.fubo18.com:443/dsports/mono.m3u8?token=eb83aaae92fa0b75a0245e82b9fdf7522013986e-b8-1784684808-1784666808",
+    "type": "m3u8"
   },
   {
-    "name": "Sony Channel",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c7eds/SonyHD/SA_Live_dash_enc/SonyHD.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "name": "TELEFE",
+    "url": "https://am91cm5leQ.fubo18.com:443/telefe/mono.m3u8?token=56f1b618c18c22ea0a38c0bcb859b7039483642d-37-1784684811-1784666811",
+    "type": "m3u8"
   },
   {
-    "name": "Cm",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c6eds/CM/SA_Live_dash_enc/CM.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "name": "WINSPORTS",
+    "url": "https://eWVz.fubo18.com:443/winsports/mono.m3u8?token=7122ef02a5806610938724ffcc6e4b0f36849087-e5-1784684814-1784666814",
+    "type": "m3u8"
   }
 ]
