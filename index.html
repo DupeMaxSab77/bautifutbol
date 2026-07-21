@@ -19,7 +19,6 @@ body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow:hidd
 .ch.on{background:#00e67622;border-left:2px solid #00e676}
 .tag{font-size:9px;padding:2px 5px;border-radius:3px;background:#2a2a3a}
 .tag.g{background:#1a3a2a;color:#00e676}
-.tag.o{background:#3a2a1a;color:#ffaa00}
 .tag.p{background:#3a1a2a;color:#ff6b9d}
 #foot{padding:8px 12px;border-top:1px solid #2a2a3a;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#555}
 #foot button{background:#1a1a25;border:1px solid #2a2a3a;color:#888;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:11px}
@@ -76,17 +75,17 @@ async function load() {
       if (el && el.dataset.url) play(el.dataset.url);
     };
     render();
-    tryLoadBitmovin();
+    loadBitmovin();
   } catch(e) {
     document.getElementById('list').innerHTML = 'Error: ' + e.message;
   }
 }
 
-function tryLoadBitmovin() {
+function loadBitmovin() {
   let s = document.createElement('script');
   s.src = 'https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js';
   s.onload = () => { bmLoaded = true; };
-  s.onerror = () => { console.log('Bitmovin no disponible, solo M3U8'); };
+  s.onerror = () => {};
   document.head.appendChild(s);
 }
 
@@ -97,8 +96,8 @@ function render() {
   if (!f.length) { list.innerHTML = 'Sin resultados'; return; }
   
   list.innerHTML = f.map(c => {
-    let t = c.type === 'mpd' ? 'MPD' : (c.url.startsWith('https://') ? 'HLS' : 'HTTP');
-    let cls = c.type === 'mpd' ? 'p' : (c.url.startsWith('https://') ? 'g' : 'o');
+    let t = c.type === 'mpd' ? 'MPD' : 'HLS';
+    let cls = c.type === 'mpd' ? 'p' : 'g';
     return `<div class="ch ${activeUrl === c.url ? 'on' : ''}" data-url="${c.url}">
       <span>${c.name}</span>
       <span class="tag ${cls}">${t}</span>
@@ -134,19 +133,11 @@ function play(url) {
   video.load();
   if (bmPlayer) { try { bmPlayer.destroy(); } catch(e) {} bmPlayer = null; }
   
-  // Mixed content
-  if (!url.startsWith('https://') && location.protocol === 'https:') {
-    document.getElementById('chname').textContent = ch.name;
-    document.getElementById('st').textContent = '❌ HTTP';
-    showErr('Este canal solo funciona en HTTP. Usá un navegador en HTTP o una VPN.');
-    return;
-  }
-  
   if (ch.type === 'mpd' && bmLoaded && typeof bitmovin !== 'undefined') {
     playMPD(ch, video);
-  } else if (ch.type === 'mpd' && !bmLoaded) {
+  } else if (ch.type === 'mpd') {
     document.getElementById('st').textContent = '❌ Bitmovin no disponible';
-    showErr('Bitmovin no cargó. Probá recargando la página.');
+    showErr('Bitmovin no cargó. Recargá la página.');
   } else {
     playHLS(ch.url, video);
   }
@@ -164,13 +155,13 @@ function playHLS(url, video) {
     hls.on(Hls.Events.ERROR, (_, data) => {
       if (data.fatal) {
         document.getElementById('st').textContent = '❌ Error';
-        showErr('Error HLS: ' + (data.response?.code || 'fallo al cargar'));
+        showErr('Error HLS: ' + (data.response?.code || 'fallo'));
       }
     });
     setTimeout(() => {
       if (document.getElementById('st').textContent === 'Cargando...') {
         document.getElementById('st').textContent = '❌ Timeout';
-        showErr('Timeout 15s. Probá con otro canal.');
+        showErr('Timeout. Probá con otro canal.');
       }
     }, 15000);
   } else {
