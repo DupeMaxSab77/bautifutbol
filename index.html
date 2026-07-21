@@ -7,50 +7,53 @@
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0}
+body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow:hidden}
 #app{display:flex;height:100vh}
-#sidebar{width:300px;background:#12121a;display:flex;flex-direction:column;border-right:1px solid #2a2a3a;flex-shrink:0}
-#sidebar h1{color:#00e676;padding:16px;font-size:18px;border-bottom:1px solid #2a2a3a}
-#search{margin:8px;padding:8px;border-radius:6px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;font-size:13px}
-#channel-list{flex:1;overflow-y:auto;padding:4px 8px;font-size:13px}
-.ch-item{padding:8px;border-radius:6px;cursor:pointer;display:flex;justify-content:space-between;margin-bottom:1px}
-.ch-item:hover{background:#1e1e2e}
-.ch-item.active{background:#00e67622;border-left:2px solid #00e676}
-.badge{font-size:9px;padding:2px 5px;border-radius:3px;background:#2a2a3a}
-.badge.green{background:#1a3a2a;color:#00e676}
-.badge.orange{background:#3a2a1a;color:#ffaa00}
-#main{flex:1;display:flex;flex-direction:column;min-width:0}
-#player-wrap{flex:1;background:#000;display:flex;align-items:center;justify-content:center;position:relative}
-#video{width:100%;height:100%;background:#000;outline:none}
-#info{padding:12px 16px;background:#12121a;border-top:1px solid #2a2a3a;display:flex;align-items:center;gap:10px;font-size:13px}
-#info span{color:#888}
-#info #name{color:#fff;flex:1}
-#err{position:absolute;background:#1a0a0a;color:#ff5252;padding:10px 20px;border-radius:8px;font-size:13px;display:none;max-width:80%;text-align:center}
-#count{font-size:11px;color:#555}
+#side{width:300px;background:#12121a;display:flex;flex-direction:column;border-right:1px solid #2a2a3a;flex-shrink:0}
+#side h1{color:#00e676;padding:14px 16px;font-size:17px;border-bottom:1px solid #2a2a3a}
+#search{margin:8px;padding:8px 10px;border-radius:6px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;font-size:13px;outline:none}
+#search:focus{border-color:#00e676}
+#list{flex:1;overflow-y:auto;padding:4px 8px;font-size:13px}
+.ch{padding:8px 10px;border-radius:6px;cursor:pointer;display:flex;justify-content:space-between;margin-bottom:1px}
+.ch:hover{background:#1e1e2e}
+.ch.on{background:#00e67622;border-left:2px solid #00e676}
+.tag{font-size:9px;padding:2px 5px;border-radius:3px;background:#2a2a3a}
+.tag.g{background:#1a3a2a;color:#00e676}
+.tag.o{background:#3a2a1a;color:#ffaa00}
+.tag.p{background:#3a1a2a;color:#ff6b9d}
 #foot{padding:8px 12px;border-top:1px solid #2a2a3a;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#555}
 #foot button{background:#1a1a25;border:1px solid #2a2a3a;color:#888;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:11px}
-@media(max-width:768px){#app{flex-direction:column}#sidebar{width:100%;max-height:35vh}}
+#main{flex:1;display:flex;flex-direction:column;min-width:0}
+#player-wrap{flex:1;background:#000;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+#video{width:100%;height:100%;background:#000;outline:none;object-fit:contain}
+#bm{width:100%;height:100%;position:absolute;top:0;left:0;display:none}
+#info{padding:10px 16px;background:#12121a;border-top:1px solid #2a2a3a;display:flex;align-items:center;gap:10px;font-size:13px}
+#info span{color:#888}
+#info #chname{color:#fff;flex:1;font-weight:600}
+#err{position:absolute;z-index:10;background:#1a0a0a;color:#ff5252;padding:8px 16px;border-radius:6px;font-size:12px;display:none;max-width:70%;text-align:center;pointer-events:none}
+@media(max-width:768px){#app{flex-direction:column}#side{width:100%;max-height:35vh}}
 </style>
 </head>
 <body>
 <div id="app">
-  <div id="sidebar">
+  <div id="side">
     <h1>StreamHub</h1>
-    <input id="search" placeholder="Buscar..." oninput="render()">
-    <div id="channel-list">Cargando...</div>
+    <input id="search" placeholder="Buscar canal..." oninput="render()">
+    <div id="list">Cargando...</div>
     <div id="foot">
-      <span id="count">0</span>
+      <span id="cnt">0</span>
       <button onclick="location.reload()">↻</button>
     </div>
   </div>
   <div id="main">
     <div id="player-wrap">
       <video id="video" controls autoplay playsinline></video>
+      <div id="bm"></div>
       <div id="err"></div>
     </div>
     <div id="info">
-      <span id="name">Seleccioná un canal</span>
-      <span id="status">Listo</span>
+      <span id="chname">Seleccioná un canal</span>
+      <span id="st">Listo</span>
     </div>
   </div>
 </div>
@@ -58,39 +61,56 @@ body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0}
 <script>
 let channels = [];
 let hls = null;
+let bmPlayer = null;
 let activeUrl = null;
+let bmLoaded = false;
 
 async function load() {
   try {
     let r = await fetch('channels/channels.json');
     if (!r.ok) throw new Error('HTTP ' + r.status);
     channels = await r.json();
-    document.getElementById('count').textContent = channels.length + ' canales';
-    document.getElementById('channel-list').onclick = e => {
-      let el = e.target.closest('.ch-item');
+    document.getElementById('cnt').textContent = channels.length + ' canales';
+    document.getElementById('list').onclick = e => {
+      let el = e.target.closest('.ch');
       if (el && el.dataset.url) play(el.dataset.url);
     };
     render();
+    tryLoadBitmovin();
   } catch(e) {
-    document.getElementById('channel-list').innerHTML = 'Error: ' + e.message;
+    document.getElementById('list').innerHTML = 'Error: ' + e.message;
   }
+}
+
+function tryLoadBitmovin() {
+  let s = document.createElement('script');
+  s.src = 'https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js';
+  s.onload = () => { bmLoaded = true; };
+  s.onerror = () => { console.log('Bitmovin no disponible, solo M3U8'); };
+  document.head.appendChild(s);
 }
 
 function render() {
   let q = document.getElementById('search').value.toLowerCase();
-  let list = document.getElementById('channel-list');
+  let list = document.getElementById('list');
   let f = q ? channels.filter(c => c.name.toLowerCase().includes(q)) : channels;
   if (!f.length) { list.innerHTML = 'Sin resultados'; return; }
   
   list.innerHTML = f.map(c => {
-    let isHttps = c.url.startsWith('https://');
-    let badge = c.type === 'mpd' ? 'MPD' : (isHttps ? 'HLS' : 'HTTP');
-    let cls = isHttps ? 'green' : 'orange';
-    return `<div class="ch-item ${activeUrl === c.url ? 'active' : ''}" data-url="${c.url}">
+    let t = c.type === 'mpd' ? 'MPD' : (c.url.startsWith('https://') ? 'HLS' : 'HTTP');
+    let cls = c.type === 'mpd' ? 'p' : (c.url.startsWith('https://') ? 'g' : 'o');
+    return `<div class="ch ${activeUrl === c.url ? 'on' : ''}" data-url="${c.url}">
       <span>${c.name}</span>
-      <span class="badge ${cls}">${badge}</span>
+      <span class="tag ${cls}">${t}</span>
     </div>`;
   }).join('');
+}
+
+function showErr(msg) {
+  let e = document.getElementById('err');
+  e.textContent = msg;
+  e.style.display = 'block';
+  setTimeout(() => { e.style.display = 'none'; }, 8000);
 }
 
 function play(url) {
@@ -100,58 +120,92 @@ function play(url) {
   activeUrl = url;
   render();
   
-  document.getElementById('name').textContent = '▶ ' + ch.name;
-  document.getElementById('status').textContent = 'Cargando...';
+  document.getElementById('chname').textContent = '▶ ' + ch.name;
+  document.getElementById('st').textContent = 'Cargando...';
   document.getElementById('err').style.display = 'none';
   
-  // Destroy previous HLS
+  // Destroy previous
   if (hls) { hls.destroy(); hls = null; }
+  document.getElementById('bm').style.display = 'none';
+  document.getElementById('video').style.display = 'block';
   let video = document.getElementById('video');
   video.pause();
   video.src = '';
   video.load();
+  if (bmPlayer) { try { bmPlayer.destroy(); } catch(e) {} bmPlayer = null; }
   
-  // Check mixed content
+  // Mixed content
   if (!url.startsWith('https://') && location.protocol === 'https:') {
-    document.getElementById('name').textContent = ch.name;
-    document.getElementById('status').textContent = '❌ Solo HTTP';
-    document.getElementById('err').textContent = 'Este canal solo funciona en HTTP. No disponible desde HTTPS.';
-    document.getElementById('err').style.display = 'block';
+    document.getElementById('chname').textContent = ch.name;
+    document.getElementById('st').textContent = '❌ HTTP';
+    showErr('Este canal solo funciona en HTTP. Usá un navegador en HTTP o una VPN.');
     return;
   }
   
-  // Play with hls.js or native
+  if (ch.type === 'mpd' && bmLoaded && typeof bitmovin !== 'undefined') {
+    playMPD(ch, video);
+  } else if (ch.type === 'mpd' && !bmLoaded) {
+    document.getElementById('st').textContent = '❌ Bitmovin no disponible';
+    showErr('Bitmovin no cargó. Probá recargando la página.');
+  } else {
+    playHLS(ch.url, video);
+  }
+}
+
+function playHLS(url, video) {
   if (Hls && Hls.isSupported()) {
     hls = new Hls({ enableWorker: false });
     hls.loadSource(url);
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
       video.play().catch(() => {});
-      document.getElementById('status').textContent = '▶ OK';
+      document.getElementById('st').textContent = '▶ OK';
     });
     hls.on(Hls.Events.ERROR, (_, data) => {
       if (data.fatal) {
-        document.getElementById('status').textContent = '❌ Error';
-        document.getElementById('err').textContent = 'Error HLS: ' + (data.response?.code || 'fallo');
-        document.getElementById('err').style.display = 'block';
+        document.getElementById('st').textContent = '❌ Error';
+        showErr('Error HLS: ' + (data.response?.code || 'fallo al cargar'));
       }
     });
     setTimeout(() => {
-      if (document.getElementById('status').textContent === 'Cargando...') {
-        document.getElementById('status').textContent = '❌ Timeout';
-        document.getElementById('err').textContent = 'El stream no responde. Probá con otro canal.';
-        document.getElementById('err').style.display = 'block';
+      if (document.getElementById('st').textContent === 'Cargando...') {
+        document.getElementById('st').textContent = '❌ Timeout';
+        showErr('Timeout 15s. Probá con otro canal.');
       }
     }, 15000);
   } else {
     video.src = url;
-    video.play().then(() => {
-      document.getElementById('status').textContent = '▶ OK';
-    }).catch(e => {
-      document.getElementById('status').textContent = '❌ Error';
-      document.getElementById('err').textContent = 'Error: ' + e.message;
-      document.getElementById('err').style.display = 'block';
-    });
+    video.play().then(() => { document.getElementById('st').textContent = '▶ OK'; })
+      .catch(e => { document.getElementById('st').textContent = '❌ Error'; showErr(e.message); });
+  }
+}
+
+async function playMPD(ch, video) {
+  video.style.display = 'none';
+  let bm = document.getElementById('bm');
+  bm.style.display = 'block';
+  
+  try {
+    if (!bmPlayer) {
+      bmPlayer = new bitmovin.player.Player(bm, {
+        key: '2f903b3f-3e3e-4c77-b3ef-4afed705ae75',
+        ui: false
+      });
+    }
+    let src = { title: ch.name, dash: ch.url };
+    if (ch.keyId && ch.key) {
+      src.drm = { clearkey: { [ch.keyId]: ch.key } };
+    }
+    await Promise.race([
+      bmPlayer.load(src),
+      new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout 20s')), 20000))
+    ]);
+    document.getElementById('st').textContent = '▶ OK';
+  } catch(e) {
+    document.getElementById('st').textContent = '❌ MPD Error';
+    showErr('MPD: ' + (e.message || 'error'));
+    bm.style.display = 'none';
+    video.style.display = 'block';
   }
 }
 
