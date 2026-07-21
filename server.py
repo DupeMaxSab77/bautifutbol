@@ -22,14 +22,18 @@ MIME_TYPES = {
     '.ico': 'image/x-icon',
 }
 
-def fetch(url, timeout=15):
+def fetch(url, timeout=10):
     try:
         req = urllib.request.Request(url, headers={
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
             'Referer': 'https://bestleague.top/',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         })
         return urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX).read()
-    except: return None
+    except Exception as e:
+        sys.stderr.write(f"[fetch] {url[:50]}: {e}\n")
+        sys.stderr.flush()
+        return None
 
 def get_mpd(b64):
     html = fetch(f"https://bestleague.top/tok.html?get={b64}")
@@ -76,7 +80,10 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.json_response(CHANNELS)
         elif path == '/api/mpd':
             b64 = self.path.split('b64=')[1].split('&')[0] if 'b64=' in self.path else ''
-            self.json_response(get_mpd(b64))
+            result = get_mpd(b64)
+            self.json_response(result)
+        elif path == '/api/ping':
+            self.json_response({"ok": True, "channels": len(CHANNELS)})
         else:
             self.serve_static(path)
     
