@@ -1,5 +1,7 @@
-FROM nginx:latest
-COPY nginx.conf /etc/nginx/nginx.conf
+FROM nginx:alpine
+RUN apk add --no-cache python3
+COPY entrypoint.sh /entrypoint.sh
 COPY . /usr/share/nginx/html
+RUN chmod +x /entrypoint.sh
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/entrypoint.sh"]

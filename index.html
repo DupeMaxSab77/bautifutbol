@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StreamHub</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.compiled.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;height:100vh}
@@ -14,12 +15,12 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
 .c{padding:6px 8px;border-radius:4px;cursor:pointer;margin-bottom:1px;display:flex;justify-content:space-between}
 .c:hover{background:#1e1e2e}
 .c.on{background:#00e67622;border-left:2px solid #00e676}
-.t{font-size:8px;padding:1px 4px;border-radius:2px;background:#1a3a2a;color:#00e676}
+.t{font-size:8px;padding:1px 4px;border-radius:2px}
+.t1{background:#1a3a2a;color:#00e676}
 .t2{background:#3a1a2a;color:#ff6b9d}
 #m{flex:1;display:flex;flex-direction:column}
-#w{flex:1;background:#000;position:relative;overflow:hidden}
-#v{width:100%;height:100%;background:#000;object-fit:contain;display:none}
-#ifr{width:100%;height:100%;border:none;background:#000}
+#w{flex:1;background:#000;position:relative}
+#v{width:100%;height:100%;background:#000;object-fit:contain}
 #i{padding:6px 12px;background:#12121a;border-top:1px solid #2a2a3a;display:flex;justify-content:space-between;font-size:11px}
 #r{color:#888}#n{color:#fff}
 @media(max-width:768px){#s{width:100%;max-height:30vh}body{flex-direction:column}}
@@ -32,15 +33,12 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
   <div style="padding:4px 8px;font-size:10px;color:#555;border-top:1px solid #2a2a3a" id="c"></div>
 </div>
 <div id="m">
-  <div id="w">
-    <iframe id="ifr" allow="encrypted-media; autoplay; fullscreen"></iframe>
-    <video id="v" controls playsinline></video>
-  </div>
-  <div id="i"><span id="n">Elegí un canal</span><span id="r">Listo</span></div>
+  <div id="w"><video id="v" controls autoplay playsinline></video></div>
+  <div id="i"><span id="n">Elegí un canal</span><span id="r">shaka + hls</span></div>
 </div>
 
 <script>
-let cc=[],hls=null,au=null;
+let cc=[],hls=null,au=null,shp=null;
 
 async function load(){
   try{
@@ -51,7 +49,9 @@ async function load(){
     document.getElementById('l').onclick=e=>{
       let el=e.target.closest('.c');
       if(el)play(el.dataset.url);
-    };render();
+    };
+    render();
+    shaka.polyfill.installAll();
   }catch(e){document.getElementById('l').innerHTML='Error: '+e.message}
 }
 
@@ -59,7 +59,7 @@ function render(){
   let q=(document.getElementById('l').querySelector('input')||{}).value||'';
   let f=q?cc.filter(c=>c.name.toLowerCase().includes(q)):cc;
   document.getElementById('l').innerHTML=(f.length?f.map(c=>
-    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='m3u8'?'':'t2'}">${c.type==='m3u8'?'H':'TV'}</span></div>`
+    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='mpd'?'t2':'t1'}">${c.type==='mpd'?'D':'H'}</span></div>`
   ).join(''):'Sin resultados')+
   '<input placeholder="Buscar..." oninput="render()" style="margin-top:6px;width:100%;padding:5px;border-radius:4px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;font-size:11px;outline:none">';
 }
@@ -72,27 +72,49 @@ function play(u){
   document.getElementById('r').textContent='Cargando...';
   
   if(hls){hls.destroy();hls=null}
+  if(shp){shp.destroy();shp=null}
   let v=document.getElementById('v');
   v.pause();v.src='';v.load();
-  v.style.display='none';
-  document.getElementById('ifr').style.display='none';
   
-  if(ch.type==='tok'){
-    let ifr=document.getElementById('ifr');
-    ifr.src=ch.url;
-    ifr.style.display='block';
-    document.getElementById('r').textContent='▶ TV';
-  }else{
-    v.style.display='block';
-    if(Hls&&Hls.isSupported()){
-      hls=new Hls({enableWorker:false});
-      hls.loadSource(ch.url);
-      hls.attachMedia(v);
-      hls.on(Hls.Events.MANIFEST_PARSED,()=>{
-        v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
-      });
-      hls.on(Hls.Events.ERROR,(_,d)=>{if(d.fatal)document.getElementById('r').textContent='❌ Error'});
-    }else{v.src=ch.url;v.play().then(()=>document.getElementById('r').textContent='▶ OK');}
+  setTimeout(()=>{
+    if(document.getElementById('r').textContent==='Cargando...'){
+      document.getElementById('r').textContent='❌ Timeout';
+    }
+  },20000);
+  
+  if(ch.type==='mpd') loadMPD(ch,v);
+  else loadHLS(ch,v);
+}
+
+function loadHLS(ch,v){
+  if(Hls&&Hls.isSupported()){
+    hls=new Hls({enableWorker:false});
+    hls.loadSource(ch.url);
+    hls.attachMedia(v);
+    hls.on(Hls.Events.MANIFEST_PARSED,()=>{
+      v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
+    });
+    hls.on(Hls.Events.ERROR,(_,d)=>{if(d.fatal)document.getElementById('r').textContent='❌ Error'});
+  }else{v.src=ch.url;v.play().then(()=>document.getElementById('r').textContent='▶ OK');}
+}
+
+async function loadMPD(ch,v){
+  if(!shaka.Player.isBrowserSupported()){
+    document.getElementById('r').textContent='❌ No soportado';return;
+  }
+  try{
+    let p=new shaka.Player();shp=p;
+    await p.attach(v);
+    let cfg={manifest:{dash:{ignoreMinBufferTime:true}}};
+    if(ch.keyId&&ch.key){
+      cfg.drm={clearKeys:{}};
+      cfg.drm.clearKeys[ch.keyId]=ch.key;
+    }
+    p.configure(cfg);
+    await p.load(ch.url);
+    v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
+  }catch(e){
+    document.getElementById('r').textContent='❌ Error';
   }
 }
 
