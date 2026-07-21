@@ -21,9 +21,7 @@ function renderChannels(filter = '') {
   
   list.innerHTML = filtered.map(ch => `
     <div class="ch-item ${currentChannel === ch.url ? 'active' : ''}" onclick="playChannel('${encodeURIComponent(ch.url)}')">
-      <div class="ch-info">
-        <div class="ch-name">${ch.name}</div>
-      </div>
+      <div class="ch-name">${ch.name}</div>
       <span class="ch-type ${ch.type}">${ch.type}</span>
     </div>
   `).join('');
@@ -43,19 +41,32 @@ async function playChannel(encodedUrl) {
   
   document.getElementById('current-channel').textContent = ch.name;
   document.getElementById('current-type').textContent = ch.type;
+  
+  // Hide both players
+  document.getElementById('video-player').classList.add('hidden');
+  document.getElementById('iframe-player').classList.add('hidden');
   document.getElementById('loading-msg').textContent = 'Cargando...';
   document.getElementById('loading-msg').classList.remove('hidden');
   document.getElementById('error-msg').classList.add('hidden');
   
   destroyPlayer();
   
+  if (ch.type === 'mpd') {
+    // MPD -> usar iframe para telelibrefull (ahi funciona con la extension Chrome)
+    await playIframe(ch);
+  } else {
+    // M3U8/TS -> usar video player con hls.js
+    await playVideo(url, ch.type);
+  }
+}
+
+async function playVideo(url, type) {
   const video = document.getElementById('video-player');
+  video.classList.remove('hidden');
   
   try {
-    if (ch.type === 'm3u8' || url.endsWith('.m3u8')) {
+    if (type === 'm3u8' || url.endsWith('.m3u8')) {
       await playM3U8(url, video);
-    } else if (ch.type === 'mpd' || url.endsWith('.mpd')) {
-      await playMPD(url, video);
     } else if (url.endsWith('.ts')) {
       video.src = url;
       await video.play();
@@ -70,6 +81,22 @@ async function playChannel(encodedUrl) {
   }
 }
 
+async function playIframe(ch) {
+  const iframe = document.getElementById('iframe-player');
+  iframe.classList.remove('hidden');
+  
+  // Si es de telelibrefull, usar la pagina original
+  let src = ch.url;
+  // Si la URL es un MPD directo, buscar la pagina de telelibrefull correspondiente
+  if (src.includes('cvattv.com.ar') || src.endsWith('.mpd')) {
+    const name = ch.name.toLowerCase().replace(/\s+/g, '-');
+    src = `https://telelibrefull.online/en-vivo/${name}/`;
+  }
+  
+  iframe.src = src;
+  document.getElementById('loading-msg').classList.add('hidden');
+}
+
 function playM3U8(url, video) {
   return new Promise((resolve, reject) => {
     if (Hls.isSupported()) {
@@ -82,7 +109,7 @@ function playM3U8(url, video) {
       hls.attachMedia(video);
       
       const timeout = setTimeout(() => {
-        reject(new Error('Timeout: el stream no responde'));
+        reject(new Error('Timeout: el stream no responde (15s)'));
       }, 15000);
       
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
@@ -111,54 +138,6 @@ function playM3U8(url, video) {
     } else {
       reject(new Error('HLS no soportado en este navegador'));
     }
-  });
-}
-
-function playMPD(url, video) {
-  return new Promise((resolve, reject) => {
-    shaka.polyfill.installAll();
-    if (!shaka.Player.isBrowserSupported()) {
-      reject(new Error('MPD no soportado en este navegador. Usá Chrome.'));
-      return;
-    }
-    
-    const player = new shaka.Player();
-    currentPlayer = player;
-    player.attach(video);
-    
-    player.configure({
-      drm: { servers: {}, clearKeys: {} },
-      manifest: { dash: { ignoreMinBufferTime: true } },
-      streaming: { retryParameters: { maxAttempts: 1 } }
-    });
-    
-    const timeout = setTimeout(() => {
-      reject(new Error('Timeout: el MPD no responde'));
-    }, 15000);
-    
-    player.addEventListener('error', () => {
-      clearTimeout(timeout);
-    });
-    
-    player.load(url).then(() => {
-      clearTimeout(timeout);
-      video.play().catch(() => {});
-      document.getElementById('loading-msg').classList.add('hidden');
-      resolve();
-    }).catch((err) => {
-      clearTimeout(timeout);
-      const code = err.code || err.detail?.code || 0;
-      const msg = err.message || '';
-      
-      const msgs = {
-        1001: 'HTTP Error: el stream MPD no está disponible (403/404). Probablemente expiró el token.',
-        6012: 'DRM: este MPD requiere la extensión Chrome. Instalala: https://chromewebstore.google.com/detail/opmeopcambhfimffbomjgemehjkbbmji',
-        1002: 'Error de red: verificá tu conexión.',
-        1003: 'El stream MPD no es accesible desde esta ubicación.'
-      };
-      
-      reject(new Error(msgs[code] || `Error MPD (${code}): ${msg.slice(0,100)}`));
-    });
   });
 }
 

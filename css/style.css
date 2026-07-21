@@ -8,7 +8,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 #search { width:100%; padding:10px 14px; border-radius:8px; border:1px solid #2a2a3a; background:#1a1a25; color:#e0e0e0; font-size:14px; outline:none; }
 #search:focus { border-color:#00e676; }
 #channel-list { flex:1; overflow-y:auto; padding:8px; }
-.ch-item { padding:10px 12px; border-radius:8px; cursor:pointer; display:flex; align-items:center; gap:10px; margin-bottom:2px; transition:all .15s; }
+.ch-item { padding:10px 12px; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; margin-bottom:2px; transition:all .15s; }
 .ch-item:hover { background:#1e1e2e; }
 .ch-item.active { background:#00e67622; border-left:3px solid #00e676; }
 .ch-item .ch-name { font-size:14px; font-weight:500; }
@@ -22,9 +22,11 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
 #main { flex:1; display:flex; flex-direction:column; }
 #player-container { flex:1; position:relative; background:#000; display:flex; align-items:center; justify-content:center; }
 #video-player { width:100%; height:100%; object-fit:contain; }
+#iframe-player { width:100%; height:100%; border:none; background:#000; }
 #player-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; pointer-events:none; }
-#loading-msg { font-size:18px; color:#666; }
-#error-msg { font-size:14px; color:#ff5252; background:#2a1010; padding:8px 16px; border-radius:8px; }
+#loading-msg { font-size:18px; color:#666; text-align:center; padding:20px; }
+#error-msg { font-size:14px; color:#ff5252; background:#2a1010; padding:12px 20px; border-radius:8px; max-width:80%; text-align:center; pointer-events:all; }
+#error-msg a { color:#00e676; text-decoration:underline; }
 .hidden { display:none !important; }
 #channel-info { padding:12px 20px; background:#12121a; border-top:1px solid #2a2a3a; display:flex; align-items:center; gap:12px; }
 #channel-info h2 { font-size:16px; font-weight:500; }
