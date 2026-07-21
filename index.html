@@ -10,7 +10,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 #app { display:flex; height:100vh; }
-#sidebar { width:320px; min-width:320px; background:#12121a; display:flex; flex-direction:column; border-right:1px solid #2a2a3a; }
+#sidebar { width:300px; background:#12121a; display:flex; flex-direction:column; border-right:1px solid #2a2a3a; }
 .sidebar-header { padding:16px; border-bottom:1px solid #2a2a3a; }
 .sidebar-header h1 { font-size:20px; color:#00e676; }
 #search { width:100%; padding:10px; border-radius:8px; border:1px solid #2a2a3a; background:#1a1a25; color:#fff; font-size:14px; outline:none; margin-top:8px; }
@@ -23,26 +23,21 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 .ch-type.m3u8 { background:#1a3a2a; color:#00e676; }
 .ch-type.mpd { background:#3a1a2a; color:#ff6b9d; }
 .ch-type.http { background:#3a2a1a; color:#ffaa00; }
-#main { flex:1; display:flex; flex-direction:column; min-height:0; }
-#player-container { flex:1; background:#000; position:relative; min-height:0; display:flex; align-items:center; justify-content:center; }
-#video-player { width:100%; height:100%; position:absolute; top:0; left:0; object-fit:contain; }
-#bitmovin-player { width:100%; height:100%; position:absolute; top:0; left:0; }
-#error-overlay { position:absolute; z-index:100; text-align:center; padding:40px; max-width:80%; pointer-events:none; }
-#error-overlay h3 { color:#ff5252; margin-bottom:8px; }
-#error-overlay p { color:#999; font-size:14px; }
+#main { flex:1; display:flex; flex-direction:column; }
+#player-container { flex:1; background:#000; position:relative; overflow:hidden; }
+#video-player { width:100%; height:100%; object-fit:contain; background:#000; }
+#bitmovin-player { width:100%; height:100%; background:#000; }
 #channel-info { padding:12px 20px; background:#12121a; border-top:1px solid #2a2a3a; display:flex; align-items:center; gap:12px; }
 #channel-info h2 { font-size:16px; flex:1; }
 #current-type { font-size:11px; padding:3px 8px; border-radius:4px; background:#2a2a3a; }
 #status { font-size:12px; color:#888; }
 .hidden { display:none !important; }
-::-webkit-scrollbar { width:6px; }
-::-webkit-scrollbar-thumb { background:#2a2a3a; border-radius:3px; }
 .sidebar-footer { padding:12px 16px; border-top:1px solid #2a2a3a; font-size:12px; color:#666; display:flex; justify-content:space-between; }
 .sidebar-footer button { background:#1a1a25; border:1px solid #2a2a3a; color:#888; width:32px; height:32px; border-radius:8px; cursor:pointer; }
 #filter-btns { display:flex; gap:4px; padding:0 8px 8px; flex-wrap:wrap; }
 .filter-btn { padding:4px 10px; border-radius:12px; border:1px solid #2a2a3a; background:transparent; color:#888; font-size:11px; cursor:pointer; }
 .filter-btn.active { background:#00e67622; border-color:#00e676; color:#00e676; }
-@media(max-width:768px) { #app { flex-direction:column; } #sidebar { width:100%; min-width:auto; max-height:40vh; } }
+@media(max-width:768px) { #app { flex-direction:column; } #sidebar { width:100%; max-height:40vh; } }
 </style>
 </head>
 <body>
@@ -58,7 +53,7 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
       <button class="filter-btn" data-filter="mpd">MPD</button>
       <button class="filter-btn" data-filter="http">HTTP</button>
     </div>
-    <div id="channel-list"><div style="padding:20px;text-align:center;color:#555;">Cargando...</div></div>
+    <div id="channel-list">Cargando canales...</div>
     <div class="sidebar-footer">
       <span id="channel-count">0</span>
       <button onclick="location.reload()">↻</button>
@@ -66,214 +61,147 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
   </aside>
   <main id="main">
     <div id="player-container">
-      <video id="video-player" class="hidden" controls autoplay playsinline></video>
+      <video id="video-player" controls autoplay playsinline></video>
       <div id="bitmovin-player" class="hidden"></div>
-      <div id="error-overlay" style="display:none;">
-        <h3>⚠ Error</h3>
-        <p id="error-text">No se pudo reproducir</p>
-      </div>
     </div>
     <div id="channel-info">
       <h2 id="current-channel">Seleccioná un canal</h2>
       <span id="current-type"></span>
-      <span id="status">hls.js listo</span>
+      <span id="status">Iniciando...</span>
     </div>
   </main>
 </div>
 
 <script>
-const channels = [];
-const allChannels = [];
+let channels = [];
 let currentPlayer = null;
 let currentUrl = null;
-let currentFilter = 'all';
-let loadTimeout = null;
-let bitmovinPlayer = null;
-
-const BITMOVIN_KEY = '2f903b3f-3e3e-4c77-b3ef-4afed705ae75';
-
-function showError(msg) {
-  document.getElementById('error-overlay').style.display = 'block';
-  document.getElementById('error-text').textContent = msg;
-  document.getElementById('status').textContent = '❌ Error';
-}
-
-function hideError() {
-  document.getElementById('error-overlay').style.display = 'none';
-}
-
-function destroyPlayer() {
-  if (currentPlayer) {
-    try { if (currentPlayer.destroy) currentPlayer.destroy(); } catch(e) {}
-    currentPlayer = null;
-  }
-  document.getElementById('video-player').classList.add('hidden');
-  document.getElementById('bitmovin-player').classList.add('hidden');
-  const video = document.getElementById('video-player');
-  video.pause();
-  video.src = '';
-  video.load();
-}
+let bitmovinInstance = null;
 
 async function loadChannels() {
   try {
-    const resp = await fetch('channels/channels.json');
+    let resp = await fetch('channels/channels.json');
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const data = await resp.json();
-    allChannels.length = 0;
-    allChannels.push(...data);
-    allChannels.forEach(ch => {
-      ch.isHttps = ch.url.startsWith('https://');
-    });
-    applyFilter();
-    document.getElementById('channel-count').textContent = allChannels.length + ' canales';
+    channels = await resp.json();
+    document.getElementById('channel-count').textContent = channels.length + ' canales';
+    render();
+    document.getElementById('channel-list').onclick = e => {
+      let item = e.target.closest('.ch-item');
+      if (item) playChannel(item.dataset.url);
+    };
+    document.getElementById('status').textContent = 'Listo';
   } catch(e) {
-    document.getElementById('channel-list').innerHTML = 
-      '<div style="padding:20px;color:#f55;">Error: ' + e.message + '<br><br><button onclick="location.reload()" style="padding:8px 16px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;border-radius:8px;cursor:pointer;">Reintentar</button></div>';
+    document.getElementById('channel-list').innerHTML = 'Error: ' + e.message;
+    document.getElementById('status').textContent = 'Error';
   }
-}
-
-function applyFilter() {
-  currentFilter = document.querySelector('.filter-btn.active')?.dataset?.filter || 'all';
-  render();
 }
 
 function render() {
-  const q = document.getElementById('search').value.toLowerCase();
-  const list = document.getElementById('channel-list');
+  let q = document.getElementById('search').value.toLowerCase();
+  let filter = (document.querySelector('.filter-btn.active')?.dataset?.filter) || 'all';
   
-  let filtered = allChannels;
-  if (q) filtered = filtered.filter(c => c.name.toLowerCase().includes(q));
-  if (currentFilter === 'https') filtered = filtered.filter(c => c.url.startsWith('https://'));
-  else if (currentFilter === 'mpd') filtered = filtered.filter(c => c.type === 'mpd');
-  else if (currentFilter === 'http') filtered = filtered.filter(c => c.type === 'm3u8' && !c.url.startsWith('https://'));
+  let f = channels;
+  if (q) f = f.filter(c => c.name.toLowerCase().includes(q));
+  if (filter === 'https') f = f.filter(c => c.url.startsWith('https://'));
+  else if (filter === 'mpd') f = f.filter(c => c.type === 'mpd');
+  else if (filter === 'http') f = f.filter(c => c.type === 'm3u8' && !c.url.startsWith('https://'));
   
-  if (filtered.length === 0) {
-    list.innerHTML = '<div style="padding:20px;text-align:center;color:#555;">Sin resultados</div>';
-    return;
-  }
+  if (!f.length) { document.getElementById('channel-list').innerHTML = 'Sin resultados'; return; }
   
-  list.innerHTML = filtered.map(ch => {
-    const t = ch.type === 'mpd' ? 'mpd' : (ch.url.startsWith('https://') ? 'm3u8' : 'http');
+  document.getElementById('channel-list').innerHTML = f.map(ch => {
+    let t = ch.type === 'mpd' ? 'mpd' : (ch.url.startsWith('https://') ? 'm3u8' : 'http');
     return `<div class="ch-item ${currentUrl === ch.url ? 'active' : ''}" data-url="${ch.url}">
       <span>${ch.name}</span>
       <span class="ch-type ${t}">${t}</span>
     </div>`;
   }).join('');
-  
-  list.onclick = function(e) {
-    const item = e.target.closest('.ch-item');
-    if (item) playChannel(item.dataset.url);
-  };
 }
 
 document.getElementById('search').addEventListener('input', render);
+document.querySelectorAll('.filter-btn').forEach(b => b.addEventListener('click', function() {
+  document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+  this.classList.add('active');
+  render();
+}));
 
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    applyFilter();
-  });
-});
+function destroyPlayer() {
+  if (currentPlayer) { try { currentPlayer.destroy(); } catch(e) {} currentPlayer = null; }
+  let v = document.getElementById('video-player');
+  v.pause(); v.src = ''; v.load();
+  document.getElementById('bitmovin-player').classList.add('hidden');
+  document.getElementById('video-player').classList.remove('hidden');
+}
 
 async function playChannel(url) {
-  const ch = allChannels.find(c => c.url === url);
+  let ch = channels.find(c => c.url === url);
   if (!ch) return;
   
-  currentUrl = ch.url;
-  hideError();
+  currentUrl = url;
   destroyPlayer();
-  
-  document.querySelectorAll('.ch-item').forEach(el => {
-    el.classList.toggle('active', el.dataset.url === url);
-  });
+  render();
   
   document.getElementById('current-channel').textContent = '▶ ' + ch.name;
   document.getElementById('current-type').textContent = ch.type;
   document.getElementById('status').textContent = 'Cargando...';
   
-  // Mixed content check
   if (!url.startsWith('https://') && location.protocol === 'https:') {
-    showError('Este canal solo funciona en HTTP. No está disponible desde HTTPS. Usá el filtro HTTPS.');
-    document.getElementById('status').textContent = '❌ HTTP';
+    document.getElementById('status').textContent = '❌ Solo HTTP - usá filtro HTTPS';
     return;
   }
   
-  // Timeout
-  if (loadTimeout) clearTimeout(loadTimeout);
-  loadTimeout = setTimeout(() => {
-    showError('Timeout: el stream no responde');
-    document.getElementById('status').textContent = '❌ Timeout';
-  }, 20000);
-  
   try {
     if (ch.type === 'mpd') {
-      // Use Bitmovin for MPD with DRM
-      await playWithBitmovin(ch);
+      await playMPD(ch);
     } else {
-      // Use hls.js for M3U8
-      await playWithHlsjs(ch);
+      await playHLS(ch.url);
     }
-    if (loadTimeout) clearTimeout(loadTimeout);
     document.getElementById('status').textContent = '▶ OK';
-    document.getElementById('current-channel').textContent = ch.name;
   } catch(e) {
-    if (loadTimeout) clearTimeout(loadTimeout);
-    showError(e.message || 'Error de reproducción');
-    document.getElementById('status').textContent = '❌ Error';
+    document.getElementById('status').textContent = '❌ ' + (e.message || 'error');
   }
 }
 
-function playWithHlsjs(ch) {
+function playHLS(url) {
   return new Promise((resolve, reject) => {
-    const video = document.getElementById('video-player');
-    video.classList.remove('hidden');
+    let video = document.getElementById('video-player');
     
-    if (!Hls.isSupported()) {
-      video.src = ch.url;
+    if (Hls.isSupported()) {
+      let hls = new Hls({ enableWorker: false });
+      currentPlayer = hls;
+      hls.loadSource(url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => { video.play().catch(()=>{}); resolve(); });
+      hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) reject(new Error('HLS error')); });
+      setTimeout(() => reject(new Error('Timeout 15s')), 15000);
+    } else {
+      video.src = url;
       video.play().then(resolve).catch(reject);
-      return;
     }
-    
-    const hls = new Hls({ enableWorker: false });
-    currentPlayer = hls;
-    hls.loadSource(ch.url);
-    hls.attachMedia(video);
-    
-    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-      video.play().catch(() => {});
-      resolve();
-    });
-    
-    hls.on(Hls.Events.ERROR, (_, data) => {
-      if (data.fatal) {
-        const msg = data.response ? `HTTP ${data.response.code}` : 'Fallo al cargar';
-        reject(new Error(msg));
-      }
-    });
   });
 }
 
-async function playWithBitmovin(ch) {
-  const container = document.getElementById('bitmovin-player');
+async function playMPD(ch) {
+  let container = document.getElementById('bitmovin-player');
   container.classList.remove('hidden');
+  document.getElementById('video-player').classList.add('hidden');
   
-  if (!bitmovinPlayer) {
-    bitmovinPlayer = new bitmovin.player.Player(container, {
-      key: BITMOVIN_KEY,
+  if (!bitmovinInstance) {
+    bitmovinInstance = new bitmovin.player.Player(container, {
+      key: '2f903b3f-3e3e-4c77-b3ef-4afed705ae75',
       ui: false
     });
   }
-  currentPlayer = bitmovinPlayer;
+  currentPlayer = bitmovinInstance;
   
   let source = { title: ch.name, dash: ch.url };
   if (ch.keyId && ch.key) {
-    source.drm = { clearkey: {} };
-    source.drm.clearkey[ch.keyId] = ch.key;
+    source.drm = { clearkey: { [ch.keyId]: ch.key } };
   }
   
-  await bitmovinPlayer.load(source);
+  await Promise.race([
+    bitmovinInstance.load(source),
+    new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout 20s')), 20000))
+  ]);
 }
 
 loadChannels();
