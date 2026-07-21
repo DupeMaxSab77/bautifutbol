@@ -194,20 +194,5 @@
     "b64": "Q00=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "DSports",
-    "type": "m3u8",
-    "hls_name": "dsports"
-  },
-  {
-    "name": "Telefe",
-    "type": "m3u8",
-    "hls_name": "telefe"
-  },
-  {
-    "name": "WinSports",
-    "type": "m3u8",
-    "hls_name": "winsports"
   }
 ]

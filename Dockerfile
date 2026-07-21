@@ -1,8 +1,5 @@
-FROM nginx:alpine
-RUN apk add --no-cache python3
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY . /usr/share/nginx/html
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+FROM python:3-alpine
+WORKDIR /app
+COPY . .
 EXPOSE 80
-CMD ["/entrypoint.sh"]
+CMD ["python3", "server.py"]
