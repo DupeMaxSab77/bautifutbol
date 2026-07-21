@@ -1,157 +1,157 @@
 [
   {
     "name": "Canal 4 Uruguay",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/canal-4-uruguay/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Q2FuYWw0X1VSVQ=="
   },
   {
     "name": "Canal 10 Uruguay",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/canal-10-uruguay/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Q2FuYWwxMF9VUlU="
   },
   {
     "name": "Teledoce",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/teledoce/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Q2FuYWwxMlVSVQ=="
   },
   {
     "name": "A24",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/a24/"
+    "type": "tok",
+    "url": "/t/tok.html?get=QW1lcmljYTI0"
   },
   {
     "name": "America TV",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/america-tv/"
+    "type": "tok",
+    "url": "/t/tok.html?get=QW1lcmljYVRW"
   },
   {
     "name": "C5N",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/c5n/"
+    "type": "tok",
+    "url": "/t/tok.html?get=QzVO"
   },
   {
     "name": "Cronica TV",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/cronicatv/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Q3JvbmljYVRW"
   },
   {
     "name": "TN",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/tn/"
+    "type": "tok",
+    "url": "/t/tok.html?get=VG9kb05vdGljaWFz"
   },
   {
     "name": "Disney Channel",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/disney-channel/"
+    "type": "tok",
+    "url": "/t/tok.html?get=RGlzbmV5Q2hhbm5lbEhE"
   },
   {
     "name": "HBO",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPSEQ="
   },
   {
     "name": "HBO 2",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-2/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPXzI="
   },
   {
     "name": "HBO Plus",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-plus/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPX1BsdXM="
   },
   {
     "name": "HBO Family",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-family/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPX0ZhbWlseQ=="
   },
   {
     "name": "HBO Mundi",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-mundi/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPX011bmRp"
   },
   {
     "name": "HBO Xtreme",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-xtreme/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPX0V4dHJlbWU="
   },
   {
     "name": "HBO Pop",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-pop/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPX1BPUA=="
   },
   {
     "name": "HBO Signature",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/hbo-signature/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SEJPX1NpZ25hdHVyZQ=="
   },
   {
     "name": "History",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/history/"
+    "type": "tok",
+    "url": "/t/tok.html?get=SGlzdG9yeUhE"
   },
   {
     "name": "Nat Geo",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/national-geographic/"
+    "type": "tok",
+    "url": "/t/tok.html?get=TmF0R2VvSEQ="
   },
   {
     "name": "Animal Planet",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/animal-planet/"
+    "type": "tok",
+    "url": "/t/tok.html?get=QW5pbWFsUGxhbmV0"
   },
   {
     "name": "Cartoon Network",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/cartoon-network/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Q2FydG9vbk5ldHdvcms="
   },
   {
     "name": "MTV",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/mtv/"
+    "type": "tok",
+    "url": "/t/tok.html?get=TVRWX0hE"
   },
   {
     "name": "Nick",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/nick/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Tmlja2Vsb2Rlb24="
   },
   {
     "name": "Nick Jr",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/nickjr/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Tmlja19Kcg=="
   },
   {
     "name": "TNT Series",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/tnt-series/"
+    "type": "tok",
+    "url": "/t/tok.html?get=VE5UU2VyaWVz"
   },
   {
     "name": "TNT Novelas",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/tnt-novelas/"
+    "type": "tok",
+    "url": "/t/tok.html?get=VEJT"
   },
   {
     "name": "Sony Channel",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/sony-channel/"
+    "type": "tok",
+    "url": "/t/tok.html?get=U29ueUhE"
   },
   {
     "name": "CM",
-    "type": "iframe",
-    "url": "https://telelibrefull.online/en-vivo/cm/"
+    "type": "tok",
+    "url": "/t/tok.html?get=Q00="
   },
   {
     "name": "DSports",
     "type": "m3u8",
-    "url": "https://cgxheq.fubo18.com:443/dsports/mono.m3u8?token=517e60a300f0882341d906898dfd4176129fe60d-86-1784685020-1784667020"
+    "url": "https://a2lja3m.fubo18.com:443/dsports/mono.m3u8?token=059b7a7fb6ddb551d693b89ea3608cd9d46660d4-d9-1784685181-1784667181"
   },
   {
     "name": "Telefe",
     "type": "m3u8",
-    "url": "https://cgxheq.fubo18.com:443/telefe/mono.m3u8?token=6072c993c3855b0e53c6d88f37334d2b6dd5b562-fa-1784685022-1784667022"
+    "url": "https://bmf0aw9u.fubo18.com:443/telefe/mono.m3u8?token=8c9d462c7605a38bbb9104b0e59c540eb3dc1bbe-a1-1784685183-1784667183"
   },
   {
     "name": "WinSports",
     "type": "m3u8",
-    "url": "https://YXdlc29tZQ.fubo18.com:443/winsports/mono.m3u8?token=f7e906012374a8646fda2ce1c877fcacf60f38a9-e9-1784685023-1784667023"
+    "url": "https://b2ZmaWNpYWw.fubo18.com:443/winsports/mono.m3u8?token=e4f037b0cf6044a1791e4e70fa0862d8301b1c00-f8-1784685185-1784667185"
   }
 ]

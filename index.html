@@ -14,13 +14,12 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
 .c{padding:6px 8px;border-radius:4px;cursor:pointer;margin-bottom:1px;display:flex;justify-content:space-between}
 .c:hover{background:#1e1e2e}
 .c.on{background:#00e67622;border-left:2px solid #00e676}
-.t{font-size:8px;padding:1px 4px;border-radius:2px}
-.t1{background:#1a3a2a;color:#00e676}
+.t{font-size:8px;padding:1px 4px;border-radius:2px;background:#1a3a2a;color:#00e676}
 .t2{background:#3a1a2a;color:#ff6b9d}
 #m{flex:1;display:flex;flex-direction:column}
 #w{flex:1;background:#000;position:relative;overflow:hidden}
-#v{width:100%;height:100%;background:#000;object-fit:contain}
-#ifr{width:100%;height:100%;border:none;display:none}
+#v{width:100%;height:100%;background:#000;object-fit:contain;display:none}
+#ifr{width:100%;height:100%;border:none;background:#000}
 #i{padding:6px 12px;background:#12121a;border-top:1px solid #2a2a3a;display:flex;justify-content:space-between;font-size:11px}
 #r{color:#888}#n{color:#fff}
 @media(max-width:768px){#s{width:100%;max-height:30vh}body{flex-direction:column}}
@@ -34,8 +33,8 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
 </div>
 <div id="m">
   <div id="w">
-    <video id="v" controls playsinline></video>
     <iframe id="ifr" allow="encrypted-media; autoplay; fullscreen"></iframe>
+    <video id="v" controls playsinline></video>
   </div>
   <div id="i"><span id="n">Elegí un canal</span><span id="r">Listo</span></div>
 </div>
@@ -60,7 +59,7 @@ function render(){
   let q=(document.getElementById('l').querySelector('input')||{}).value||'';
   let f=q?cc.filter(c=>c.name.toLowerCase().includes(q)):cc;
   document.getElementById('l').innerHTML=(f.length?f.map(c=>
-    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='iframe'?'t2':'t1'}">${c.type==='iframe'?'TV':'H'}</span></div>`
+    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='m3u8'?'':'t2'}">${c.type==='m3u8'?'H':'TV'}</span></div>`
   ).join(''):'Sin resultados')+
   '<input placeholder="Buscar..." oninput="render()" style="margin-top:6px;width:100%;padding:5px;border-radius:4px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;font-size:11px;outline:none">';
 }
@@ -72,35 +71,29 @@ function play(u){
   document.getElementById('n').textContent='▶ '+ch.name;
   document.getElementById('r').textContent='Cargando...';
   
-  // Destroy hls
   if(hls){hls.destroy();hls=null}
   let v=document.getElementById('v');
   v.pause();v.src='';v.load();
   v.style.display='none';
   document.getElementById('ifr').style.display='none';
   
-  if(ch.type==='iframe'){
-    // Cargar pagina original en iframe
+  if(ch.type==='tok'){
     let ifr=document.getElementById('ifr');
     ifr.src=ch.url;
     ifr.style.display='block';
     document.getElementById('r').textContent='▶ TV';
-  }else if(ch.type==='m3u8'){
+  }else{
     v.style.display='block';
-    playHLS(ch.url,v);
+    if(Hls&&Hls.isSupported()){
+      hls=new Hls({enableWorker:false});
+      hls.loadSource(ch.url);
+      hls.attachMedia(v);
+      hls.on(Hls.Events.MANIFEST_PARSED,()=>{
+        v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
+      });
+      hls.on(Hls.Events.ERROR,(_,d)=>{if(d.fatal)document.getElementById('r').textContent='❌ Error'});
+    }else{v.src=ch.url;v.play().then(()=>document.getElementById('r').textContent='▶ OK');}
   }
-}
-
-function playHLS(u,v){
-  if(Hls&&Hls.isSupported()){
-    hls=new Hls({enableWorker:false});
-    hls.loadSource(u);
-    hls.attachMedia(v);
-    hls.on(Hls.Events.MANIFEST_PARSED,()=>{
-      v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
-    });
-    hls.on(Hls.Events.ERROR,(_,d)=>{if(d.fatal)document.getElementById('r').textContent='❌ Error'});
-  }else{v.src=u;v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');}
 }
 
 load();
