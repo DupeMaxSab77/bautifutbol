@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StreamHub</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.compiled.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow:hidden}
@@ -23,13 +24,12 @@ body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow:hidd
 #foot{padding:8px 12px;border-top:1px solid #2a2a3a;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#555}
 #foot button{background:#1a1a25;border:1px solid #2a2a3a;color:#888;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:11px}
 #main{flex:1;display:flex;flex-direction:column;min-width:0}
-#player-wrap{flex:1;background:#000;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+#player-wrap{flex:1;background:#000;position:relative;overflow:hidden}
 #video{width:100%;height:100%;background:#000;outline:none;object-fit:contain}
-#bm{width:100%;height:100%;position:absolute;top:0;left:0;display:none}
 #info{padding:10px 16px;background:#12121a;border-top:1px solid #2a2a3a;display:flex;align-items:center;gap:10px;font-size:13px}
 #info span{color:#888}
 #info #chname{color:#fff;flex:1;font-weight:600}
-#err{position:absolute;z-index:10;background:#1a0a0a;color:#ff5252;padding:8px 16px;border-radius:6px;font-size:12px;display:none;max-width:70%;text-align:center;pointer-events:none}
+#err{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:10;background:#1a0a0a;color:#ff5252;padding:8px 16px;border-radius:6px;font-size:12px;display:none;max-width:70%;text-align:center}
 @media(max-width:768px){#app{flex-direction:column}#side{width:100%;max-height:35vh}}
 </style>
 </head>
@@ -47,7 +47,6 @@ body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow:hidd
   <div id="main">
     <div id="player-wrap">
       <video id="video" controls autoplay playsinline></video>
-      <div id="bm"></div>
       <div id="err"></div>
     </div>
     <div id="info">
@@ -59,10 +58,8 @@ body{font-family:Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;overflow:hidd
 
 <script>
 let channels = [];
-let hls = null;
-let bmPlayer = null;
+let currentPlayer = null;
 let activeUrl = null;
-let bmLoaded = false;
 
 async function load() {
   try {
@@ -75,18 +72,12 @@ async function load() {
       if (el && el.dataset.url) play(el.dataset.url);
     };
     render();
-    loadBitmovin();
   } catch(e) {
     document.getElementById('list').innerHTML = 'Error: ' + e.message;
   }
-}
-
-function loadBitmovin() {
-  let s = document.createElement('script');
-  s.src = 'https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js';
-  s.onload = () => { bmLoaded = true; };
-  s.onerror = () => {};
-  document.head.appendChild(s);
+  
+  // Init shaka
+  shaka.polyfill.installAll();
 }
 
 function render() {
@@ -112,91 +103,100 @@ function showErr(msg) {
   setTimeout(() => { e.style.display = 'none'; }, 8000);
 }
 
+function destroyPlayer() {
+  if (currentPlayer) {
+    try { currentPlayer.destroy(); } catch(e) {}
+    currentPlayer = null;
+  }
+  let v = document.getElementById('video');
+  v.pause(); v.src = ''; v.load();
+}
+
 function play(url) {
   let ch = channels.find(c => c.url === url);
   if (!ch) return;
   
   activeUrl = url;
   render();
+  destroyPlayer();
   
   document.getElementById('chname').textContent = '▶ ' + ch.name;
   document.getElementById('st').textContent = 'Cargando...';
   document.getElementById('err').style.display = 'none';
   
-  // Destroy previous
-  if (hls) { hls.destroy(); hls = null; }
-  document.getElementById('bm').style.display = 'none';
-  document.getElementById('video').style.display = 'block';
-  let video = document.getElementById('video');
-  video.pause();
-  video.src = '';
-  video.load();
-  if (bmPlayer) { try { bmPlayer.destroy(); } catch(e) {} bmPlayer = null; }
-  
-  if (ch.type === 'mpd' && bmLoaded && typeof bitmovin !== 'undefined') {
-    playMPD(ch, video);
-  } else if (ch.type === 'mpd') {
-    document.getElementById('st').textContent = '❌ Bitmovin no disponible';
-    showErr('Bitmovin no cargó. Recargá la página.');
+  if (ch.type === 'mpd') {
+    playMPD(ch);
   } else {
-    playHLS(ch.url, video);
+    playHLS(ch.url);
   }
+  
+  setTimeout(() => {
+    if (document.getElementById('st').textContent === 'Cargando...') {
+      document.getElementById('st').textContent = '❌ Timeout';
+      showErr('El stream no responde. Probá con otro canal.');
+    }
+  }, 15000);
 }
 
-function playHLS(url, video) {
+function playHLS(url) {
+  let video = document.getElementById('video');
+  
   if (Hls && Hls.isSupported()) {
-    hls = new Hls({ enableWorker: false });
-    hls.loadSource(url);
-    hls.attachMedia(video);
-    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-      video.play().catch(() => {});
+    let h = new Hls({ enableWorker: false });
+    currentPlayer = h;
+    h.loadSource(url);
+    h.attachMedia(video);
+    h.on(Hls.Events.MANIFEST_PARSED, () => {
+      video.play().catch(e => {
+        // Autoplay might be blocked, that's OK
+        if (e.name !== 'AbortError') showErr('Click en el video para reproducir');
+      });
       document.getElementById('st').textContent = '▶ OK';
     });
-    hls.on(Hls.Events.ERROR, (_, data) => {
+    h.on(Hls.Events.ERROR, (_, data) => {
       if (data.fatal) {
         document.getElementById('st').textContent = '❌ Error';
         showErr('Error HLS: ' + (data.response?.code || 'fallo'));
       }
     });
-    setTimeout(() => {
-      if (document.getElementById('st').textContent === 'Cargando...') {
-        document.getElementById('st').textContent = '❌ Timeout';
-        showErr('Timeout. Probá con otro canal.');
-      }
-    }, 15000);
-  } else {
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = url;
     video.play().then(() => { document.getElementById('st').textContent = '▶ OK'; })
-      .catch(e => { document.getElementById('st').textContent = '❌ Error'; showErr(e.message); });
+      .catch(() => { document.getElementById('st').textContent = '▶ OK'; });
+  } else {
+    showErr('HLS no soportado en este navegador');
+    document.getElementById('st').textContent = '❌ Error';
   }
 }
 
-async function playMPD(ch, video) {
-  video.style.display = 'none';
-  let bm = document.getElementById('bm');
-  bm.style.display = 'block';
+async function playMPD(ch) {
+  let video = document.getElementById('video');
+  
+  if (!shaka.Player.isBrowserSupported()) {
+    showErr('DASH/MPD no soportado en este navegador');
+    document.getElementById('st').textContent = '❌ Error';
+    return;
+  }
   
   try {
-    if (!bmPlayer) {
-      bmPlayer = new bitmovin.player.Player(bm, {
-        key: '2f903b3f-3e3e-4c77-b3ef-4afed705ae75',
-        ui: false
-      });
-    }
-    let src = { title: ch.name, dash: ch.url };
+    let player = new shaka.Player();
+    currentPlayer = player;
+    await player.attach(video);
+    
+    let config = { manifest: { dash: { ignoreMinBufferTime: true } } };
     if (ch.keyId && ch.key) {
-      src.drm = { clearkey: { [ch.keyId]: ch.key } };
+      config.drm = { clearKeys: {} };
+      config.drm.clearKeys[ch.keyId] = ch.key;
     }
-    await Promise.race([
-      bmPlayer.load(src),
-      new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout 20s')), 20000))
-    ]);
+    player.configure(config);
+    
+    await player.load(ch.url);
+    video.play().catch(() => {});
     document.getElementById('st').textContent = '▶ OK';
+    
   } catch(e) {
-    document.getElementById('st').textContent = '❌ MPD Error';
-    showErr('MPD: ' + (e.message || 'error'));
-    bm.style.display = 'none';
-    video.style.display = 'block';
+    document.getElementById('st').textContent = '❌ Error';
+    showErr('MPD: ' + (e.message || e.code || 'error'));
   }
 }
 
