@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StreamHub - Player Universal</title>
+<title>StreamHub - Player DRM + HLS</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.compiled.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,8 +24,7 @@
 
   <main id="main">
     <div id="player-container">
-      <video id="video-player" class="hidden" controls autoplay playsinline></video>
-      <iframe id="iframe-player" class="hidden" allow="encrypted-media; autoplay; fullscreen"></iframe>
+      <video id="video-player" controls autoplay playsinline></video>
       <div id="player-overlay">
         <div id="loading-msg">Seleccioná un canal</div>
         <div id="error-msg" class="hidden"></div>

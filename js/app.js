@@ -41,32 +41,19 @@ async function playChannel(encodedUrl) {
   
   document.getElementById('current-channel').textContent = ch.name;
   document.getElementById('current-type').textContent = ch.type;
-  
-  // Hide both players
-  document.getElementById('video-player').classList.add('hidden');
-  document.getElementById('iframe-player').classList.add('hidden');
+  document.getElementById('video-player').classList.remove('hidden');
   document.getElementById('loading-msg').textContent = 'Cargando...';
   document.getElementById('loading-msg').classList.remove('hidden');
   document.getElementById('error-msg').classList.add('hidden');
   
   destroyPlayer();
-  
-  if (ch.type === 'mpd' || ch.type === 'iframe') {
-    // MPD/iframe -> cargar el tok.html que usa la extension Chrome
-    await playIframe(ch);
-  } else {
-    // M3U8/TS -> usar video player con hls.js
-    await playVideo(url, ch.type);
-  }
-}
-
-async function playVideo(url, type) {
   const video = document.getElementById('video-player');
-  video.classList.remove('hidden');
   
   try {
-    if (type === 'm3u8' || url.endsWith('.m3u8')) {
+    if (ch.type === 'm3u8' || url.endsWith('.m3u8')) {
       await playM3U8(url, video);
+    } else if (ch.type === 'iframe' || url.includes('tok.html')){
+      await playTokStream(url, video);
     } else if (url.endsWith('.ts')) {
       video.src = url;
       await video.play();
@@ -81,13 +68,62 @@ async function playVideo(url, type) {
   }
 }
 
-async function playIframe(ch) {
-  const iframe = document.getElementById('iframe-player');
-  iframe.classList.remove('hidden');
+async function playTokStream(tokUrl, video) {
+  // Fetch tok.html which contains the MPD URL and DRM keys
+  const resp = await fetch(tokUrl);
+  const html = await resp.text();
   
-  // Usar la URL directa del iframe (tok.html para MPD/bestleague.top)
-  iframe.src = ch.url;
-  document.getElementById('loading-msg').classList.add('hidden');
+  // Extract the 'get' parameter from URL
+  const getParam = new URL(tokUrl).searchParams.get('get') || '';
+  
+  // Decode base64 name
+  let nameB64 = '';
+  try { nameB64 = atob(getParam); } catch(e) { nameB64 = getParam; }
+  
+  // Extract number from JS
+  const numMatch = html.match(new RegExp('getURL.*' + getParam.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '.*number = (\\d+)'));
+  let number = 3;
+  if (numMatch) {
+    number = parseInt(numMatch[1]);
+  } else {
+    // Fallback: find general number assignment
+    const fallback = html.match(/else\s*\n?\s*number\s*=\s*(\d+)/);
+    if (fallback) number = parseInt(fallback[1]);
+  }
+  
+  // Extract CDN and token from mt array
+  const mtMatch = html.match(/var mt = (\[[\s\S]*?\]);/);
+  if (!mtMatch) throw new Error('No se encontró CDN en tok.html');
+  
+  let mt = [];
+  try { mt = JSON.parse(mtMatch[1]); } catch(e) { throw new Error('Error parseando CDN'); }
+  if (mt.length === 0) throw new Error('Lista CDN vacía');
+  
+  const selected = mt[Math.floor(Math.random() * mt.length)];
+  
+  // Build MPD URL
+  const mpdUrl = `https://${selected.cdn}.cvattv.com.ar/${selected.token}/live/c${number}eds/${nameB64}/SA_Live_dash_enc/${nameB64}.mpd`;
+  
+  // Extract keyId and key for this channel
+  let keyId = '', key = '';
+  
+  // Find the matching if block for this getParam
+  const keyRegex = new RegExp('getURL\\s*==\\s*["\']' + getParam.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '["\']' + 
+    '[\\s\\S]*?keyId\\s*=\\s*["\']([^"\']+)["\'];\\s*key\\s*=\\s*["\']([^"\']+)["\']');
+  const keyMatch = html.match(keyRegex);
+  
+  if (keyMatch) {
+    keyId = keyMatch[1];
+    key = keyMatch[2];
+  } else {
+    // No DRM keys found - try playing without DRM
+    console.log('No DRM keys found, trying without');
+  }
+  
+  console.log('MPD:', mpdUrl, 'KeyId:', keyId, 'Key:', key);
+  
+  // Play with Shaka Player
+  await playMPD(mpdUrl, video, keyId, key);
 }
 
 function playM3U8(url, video) {
@@ -129,9 +165,53 @@ function playM3U8(url, video) {
         reject(new Error('Error al cargar el video'));
       });
     } else {
-      reject(new Error('HLS no soportado en este navegador'));
+      reject(new Error('HLS no soportado'));
     }
   });
+}
+
+async function playMPD(url, video, keyId, key) {
+  shaka.polyfill.installAll();
+  if (!shaka.Player.isBrowserSupported()) {
+    throw new Error('MPD no soportado en este navegador');
+  }
+  
+  const player = new shaka.Player();
+  currentPlayer = player;
+  player.attach(video);
+  
+  const config = {
+    manifest: { dash: { ignoreMinBufferTime: true } },
+    streaming: { retryParameters: { maxAttempts: 1 } }
+  };
+  
+  if (keyId && key) {
+    config.drm = {
+      clearKeys: {}
+    };
+    config.drm.clearKeys[keyId] = key;
+  }
+  
+  player.configure(config);
+  
+  const timeout = setTimeout(() => {
+    throw new Error('Timeout: el MPD no responde (20s)');
+  }, 20000);
+  
+  try {
+    await player.load(url);
+    clearTimeout(timeout);
+    video.play().catch(() => {});
+    document.getElementById('loading-msg').classList.add('hidden');
+  } catch(err) {
+    clearTimeout(timeout);
+    const code = err.code || err.detail?.code || 0;
+    const msgs = {
+      1001: 'HTTP Error: MPD no disponible (token expirado?)',
+      6012: 'DRM: no se pueden obtener las claves de descifrado',
+    };
+    throw new Error(msgs[code] || `Error MPD (${code})`);
+  }
 }
 
 function showError(msg) {
