@@ -126,14 +126,25 @@ function playMPD(url, video) {
     });
     
     player.addEventListener('error', (e) => {
-      reject(new Error('Error MPD'));
+      const code = e.detail ? e.detail.code : 0;
+      if (code === 6012) {
+        reject(new Error('MPD requiere DRM (Clearkey). Instalá la extensión Chrome: https://chromewebstore.google.com/detail/opmeopcambhfimffbomjgemehjkbbmji'));
+      } else {
+        reject(new Error(`Error MPD (${code})`));
+      }
     });
     
     player.load(url).then(() => {
       video.play().catch(() => {});
       document.getElementById('loading-msg').classList.add('hidden');
       resolve();
-    }).catch(reject);
+    }).catch((err) => {
+      if (err.code === 6012) {
+        reject(new Error('MPD requiere DRM (Clearkey). Usá Chrome con la extensión MPD.'));
+      } else {
+        reject(err);
+      }
+    });
   });
 }
 
