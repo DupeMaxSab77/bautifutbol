@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StreamHub</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.compiled.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;height:100vh}
@@ -19,13 +18,11 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
 .t1{background:#1a3a2a;color:#00e676}
 .t2{background:#3a1a2a;color:#ff6b9d}
 #m{flex:1;display:flex;flex-direction:column}
-#w{flex:1;background:#000;display:flex;align-items:center;justify-content:center;position:relative}
-#v{width:100%;height:100%;background:#000}
+#w{flex:1;background:#000;position:relative;overflow:hidden}
+#v{width:100%;height:100%;background:#000;object-fit:contain}
+#ifr{width:100%;height:100%;border:none;display:none}
 #i{padding:6px 12px;background:#12121a;border-top:1px solid #2a2a3a;display:flex;justify-content:space-between;font-size:11px}
-#r{color:#888}
-#n{color:#fff}
-#o{position:absolute;color:#555;font-size:18px;pointer-events:none;opacity:.5}
-#e{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:#1a0a0a;color:#f55;padding:4px 10px;border-radius:4px;font-size:10px;display:none}
+#r{color:#888}#n{color:#fff}
 @media(max-width:768px){#s{width:100%;max-height:30vh}body{flex-direction:column}}
 </style>
 </head>
@@ -36,14 +33,17 @@ body{background:#0a0a0f;font-family:Arial,sans-serif;color:#e0e0e0;display:flex;
   <div style="padding:4px 8px;font-size:10px;color:#555;border-top:1px solid #2a2a3a" id="c"></div>
 </div>
 <div id="m">
-  <div id="w"><video id="v" controls playsinline></video><div id="o">▶</div><div id="e"></div></div>
-  <div id="i"><span id="n">Elegí un canal</span><span id="r">shaka + hls</span></div>
+  <div id="w">
+    <video id="v" controls playsinline></video>
+    <iframe id="ifr" allow="encrypted-media; autoplay; fullscreen"></iframe>
+  </div>
+  <div id="i"><span id="n">Elegí un canal</span><span id="r">Listo</span></div>
 </div>
 
 <script>
-let cc=[],hls=null,au=null,shakaP=null;
+let cc=[],hls=null,au=null;
 
-async function init(){
+async function load(){
   try{
     let r=await fetch('channels/channels.json');
     if(!r.ok)throw new Error('HTTP '+r.status);
@@ -52,25 +52,17 @@ async function init(){
     document.getElementById('l').onclick=e=>{
       let el=e.target.closest('.c');
       if(el)play(el.dataset.url);
-    };
-    render();
-    shaka.polyfill.installAll();
-  }catch(e){
-    document.getElementById('l').innerHTML='Error: '+e.message;
-  }
+    };render();
+  }catch(e){document.getElementById('l').innerHTML='Error: '+e.message}
 }
 
 function render(){
   let q=(document.getElementById('l').querySelector('input')||{}).value||'';
   let f=q?cc.filter(c=>c.name.toLowerCase().includes(q)):cc;
   document.getElementById('l').innerHTML=(f.length?f.map(c=>
-    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='mpd'?'t2':'t1'}">${c.type==='mpd'?'D':'H'}</span></div>`
+    `<div class="c ${au===c.url?'on':''}" data-url="${c.url}"><span>${c.name}</span><span class="t ${c.type==='iframe'?'t2':'t1'}">${c.type==='iframe'?'TV':'H'}</span></div>`
   ).join(''):'Sin resultados')+
   '<input placeholder="Buscar..." oninput="render()" style="margin-top:6px;width:100%;padding:5px;border-radius:4px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;font-size:11px;outline:none">';
-}
-
-function msg(m){
-  document.getElementById('r').textContent=m;
 }
 
 function play(u){
@@ -78,66 +70,40 @@ function play(u){
   if(!ch)return;
   au=u;render();
   document.getElementById('n').textContent='▶ '+ch.name;
-  msg('Cargando...');
-  document.getElementById('e').style.display='none';
+  document.getElementById('r').textContent='Cargando...';
   
+  // Destroy hls
   if(hls){hls.destroy();hls=null}
-  if(shakaP){shakaP.destroy();shakaP=null}
   let v=document.getElementById('v');
   v.pause();v.src='';v.load();
-  document.getElementById('o').style.display='none';
+  v.style.display='none';
+  document.getElementById('ifr').style.display='none';
   
-  setTimeout(()=>{
-    if(document.getElementById('r').textContent==='Cargando...'){
-      msg('❌ Timeout');
-      er('No responde. Probá otro.');
-    }
-  },20000);
-  
-  if(ch.type==='mpd') loadMPD(ch,v);
-  else loadHLS(ch.url,v);
+  if(ch.type==='iframe'){
+    // Cargar pagina original en iframe
+    let ifr=document.getElementById('ifr');
+    ifr.src=ch.url;
+    ifr.style.display='block';
+    document.getElementById('r').textContent='▶ TV';
+  }else if(ch.type==='m3u8'){
+    v.style.display='block';
+    playHLS(ch.url,v);
+  }
 }
 
-function er(t){
-  let e=document.getElementById('e');
-  e.textContent=t;e.style.display='block';
-  setTimeout(()=>{e.style.display='none'},5000);
-}
-
-function loadHLS(u,v){
+function playHLS(u,v){
   if(Hls&&Hls.isSupported()){
     hls=new Hls({enableWorker:false});
     hls.loadSource(u);
     hls.attachMedia(v);
     hls.on(Hls.Events.MANIFEST_PARSED,()=>{
-      v.play().then(()=>msg('▶ OK')).catch(()=>{msg('⏸ Click para play');document.getElementById('o').textContent='Click';document.getElementById('o').style.display='block'});
+      v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');
     });
-    hls.on(Hls.Events.ERROR,(_,d)=>{
-      if(d.fatal){msg('❌ Error');er('HLS: '+(d.response?.code||'fallo'));}
-    });
-  }else{v.src=u;v.play().then(()=>msg('▶ OK')).catch(()=>msg('⏸ Click'));}
-  document.getElementById('w').onclick=()=>v.play();
+    hls.on(Hls.Events.ERROR,(_,d)=>{if(d.fatal)document.getElementById('r').textContent='❌ Error'});
+  }else{v.src=u;v.play().then(()=>document.getElementById('r').textContent='▶ OK').catch(()=>document.getElementById('r').textContent='⏸ Click');}
 }
 
-async function loadMPD(ch,v){
-  if(!shaka.Player.isBrowserSupported()){er('Shaka no soportado');msg('❌ Error');return;}
-  try{
-    let p=new shaka.Player();shakaP=p;
-    await p.attach(v);
-    let cfg={};
-    if(ch.keyId&&ch.key) cfg={drm:{clearKeys:{[ch.keyId]:ch.key}},manifest:{dash:{ignoreMinBufferTime:true}}};
-    else cfg={manifest:{dash:{ignoreMinBufferTime:true}}};
-    p.configure(cfg);
-    await p.load(ch.url);
-    v.play().then(()=>msg('▶ OK')).catch(()=>{msg('⏸ Click');document.getElementById('o').textContent='Click';document.getElementById('o').style.display='block'});
-    document.getElementById('w').onclick=()=>v.play();
-  }catch(e){
-    msg('❌ Error');
-    er('MPD: '+(e.message||e.code||'error').slice(0,60));
-  }
-}
-
-init();
+load();
 </script>
 </body>
 </html>

@@ -1,66 +1,157 @@
 [
   {
-    "name": "Disney Channel",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/DisneyChannelHD/SA_Live_dash_enc/DisneyChannelHD.mpd",
-    "type": "mpd",
-    "keyId": "4a742e478d14023e1993e011d9415f94",
-    "key": "0df77ede9bc744376836d21afa137dda"
+    "name": "Canal 4 Uruguay",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/canal-4-uruguay/"
   },
   {
-    "name": "C5N",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/C5N/SA_Live_dash_enc/C5N.mpd",
-    "type": "mpd",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "name": "Canal 10 Uruguay",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/canal-10-uruguay/"
+  },
+  {
+    "name": "Teledoce",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/teledoce/"
+  },
+  {
+    "name": "A24",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/a24/"
   },
   {
     "name": "America TV",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/AmericaTV/SA_Live_dash_enc/AmericaTV.mpd",
-    "type": "mpd",
-    "keyId": "8ea235ce0826408b221c498115a9b62d",
-    "key": "7aa9266ed91ea4510483370029dfcf45"
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/america-tv/"
+  },
+  {
+    "name": "C5N",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/c5n/"
+  },
+  {
+    "name": "Cronica TV",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/cronicatv/"
+  },
+  {
+    "name": "TN",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/tn/"
+  },
+  {
+    "name": "Disney Channel",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/disney-channel/"
+  },
+  {
+    "name": "HBO",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo/"
+  },
+  {
+    "name": "HBO 2",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-2/"
+  },
+  {
+    "name": "HBO Plus",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-plus/"
+  },
+  {
+    "name": "HBO Family",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-family/"
+  },
+  {
+    "name": "HBO Mundi",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-mundi/"
+  },
+  {
+    "name": "HBO Xtreme",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-xtreme/"
+  },
+  {
+    "name": "HBO Pop",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-pop/"
+  },
+  {
+    "name": "HBO Signature",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/hbo-signature/"
+  },
+  {
+    "name": "History",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/history/"
   },
   {
     "name": "Nat Geo",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/NatGeoHD/SA_Live_dash_enc/NatGeoHD.mpd",
-    "type": "mpd",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/national-geographic/"
+  },
+  {
+    "name": "Animal Planet",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/animal-planet/"
   },
   {
     "name": "Cartoon Network",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/CartoonNetwork/SA_Live_dash_enc/CartoonNetwork.mpd",
-    "type": "mpd",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/cartoon-network/"
+  },
+  {
+    "name": "MTV",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/mtv/"
   },
   {
     "name": "Nick",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/Nickelodeon/SA_Live_dash_enc/Nickelodeon.mpd",
-    "type": "mpd",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/nick/"
+  },
+  {
+    "name": "Nick Jr",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/nickjr/"
   },
   {
     "name": "TNT Series",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0ODE4MzYzIiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiNzYyZjhkY2JlYWNlZDBjYiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.TePznOpu0cuVFpKwu-oJdFD6NjVm5ywfRUlVzIcHLy777iI8sd9i3pqj6MbW3RZxiGWUwBX4bB58yf2xL94KlQ==/live/c3eds/TNTSeries/SA_Live_dash_enc/TNTSeries.mpd",
-    "type": "mpd",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/tnt-series/"
   },
   {
-    "name": "DSPORTS",
-    "url": "https://eWVz.fubo18.com:443/dsports/mono.m3u8?token=eb83aaae92fa0b75a0245e82b9fdf7522013986e-b8-1784684808-1784666808",
-    "type": "m3u8"
+    "name": "TNT Novelas",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/tnt-novelas/"
   },
   {
-    "name": "TELEFE",
-    "url": "https://am91cm5leQ.fubo18.com:443/telefe/mono.m3u8?token=56f1b618c18c22ea0a38c0bcb859b7039483642d-37-1784684811-1784666811",
-    "type": "m3u8"
+    "name": "Sony Channel",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/sony-channel/"
   },
   {
-    "name": "WINSPORTS",
-    "url": "https://eWVz.fubo18.com:443/winsports/mono.m3u8?token=7122ef02a5806610938724ffcc6e4b0f36849087-e5-1784684814-1784666814",
-    "type": "m3u8"
+    "name": "CM",
+    "type": "iframe",
+    "url": "https://telelibrefull.online/en-vivo/cm/"
+  },
+  {
+    "name": "DSports",
+    "type": "m3u8",
+    "url": "https://cgxheq.fubo18.com:443/dsports/mono.m3u8?token=517e60a300f0882341d906898dfd4176129fe60d-86-1784685020-1784667020"
+  },
+  {
+    "name": "Telefe",
+    "type": "m3u8",
+    "url": "https://cgxheq.fubo18.com:443/telefe/mono.m3u8?token=6072c993c3855b0e53c6d88f37334d2b6dd5b562-fa-1784685022-1784667022"
+  },
+  {
+    "name": "WinSports",
+    "type": "m3u8",
+    "url": "https://YXdlc29tZQ.fubo18.com:443/winsports/mono.m3u8?token=f7e906012374a8646fda2ce1c877fcacf60f38a9-e9-1784685023-1784667023"
   }
 ]
