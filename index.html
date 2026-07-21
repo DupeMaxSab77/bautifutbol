@@ -21,9 +21,13 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 .ch-type { font-size:10px; padding:2px 6px; border-radius:4px; }
 .ch-type.m3u8 { background:#1a3a2a; color:#00e676; }
 .ch-type.mpd { background:#3a1a2a; color:#ff6b9d; }
+.ch-type.http { background:#3a2a1a; color:#ffaa00; }
 #main { flex:1; display:flex; flex-direction:column; min-height:0; }
-#player-container { flex:1; background:#000; position:relative; min-height:0; }
+#player-container { flex:1; background:#000; position:relative; min-height:0; display:flex; align-items:center; justify-content:center; }
 #player { width:100%; height:100%; position:absolute; top:0; left:0; }
+#error-overlay { position:absolute; z-index:100; text-align:center; padding:40px; max-width:80%; }
+#error-overlay h3 { color:#ff5252; margin-bottom:8px; }
+#error-overlay p { color:#999; font-size:14px; }
 #channel-info { padding:12px 20px; background:#12121a; border-top:1px solid #2a2a3a; display:flex; align-items:center; gap:12px; }
 #channel-info h2 { font-size:16px; flex:1; }
 #current-type { font-size:11px; padding:3px 8px; border-radius:4px; background:#2a2a3a; }
@@ -32,6 +36,9 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 ::-webkit-scrollbar-thumb { background:#2a2a3a; border-radius:3px; }
 .sidebar-footer { padding:12px 16px; border-top:1px solid #2a2a3a; font-size:12px; color:#666; display:flex; justify-content:space-between; }
 .sidebar-footer button { background:#1a1a25; border:1px solid #2a2a3a; color:#888; width:32px; height:32px; border-radius:8px; cursor:pointer; }
+#filter-btns { display:flex; gap:4px; padding:0 8px 8px; }
+.filter-btn { padding:4px 10px; border-radius:12px; border:1px solid #2a2a3a; background:transparent; color:#888; font-size:11px; cursor:pointer; }
+.filter-btn.active { background:#00e67622; border-color:#00e676; color:#00e676; }
 @media(max-width:768px) { #app { flex-direction:column; } #sidebar { width:100%; max-height:40vh; } }
 </style>
 </head>
@@ -42,14 +49,26 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
       <h1>StreamHub</h1>
       <input type="text" id="search" placeholder="Buscar canal...">
     </div>
-    <div id="channel-list"><div style="padding:20px;text-align:center;color:#555;">Cargando canales...</div></div>
+    <div id="filter-btns">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="https">HTTPS</button>
+      <button class="filter-btn" data-filter="mpd">MPD</button>
+      <button class="filter-btn" data-filter="http">HTTP</button>
+    </div>
+    <div id="channel-list"><div style="padding:20px;text-align:center;color:#555;">Cargando...</div></div>
     <div class="sidebar-footer">
       <span id="channel-count">0</span>
       <button onclick="location.reload()">↻</button>
     </div>
   </aside>
   <main id="main">
-    <div id="player-container"><div id="player"></div></div>
+    <div id="player-container">
+      <div id="player"></div>
+      <div id="error-overlay" style="display:none;">
+        <h3>⚠ Error</h3>
+        <p id="error-text">No se pudo reproducir</p>
+      </div>
+    </div>
     <div id="channel-info">
       <h2 id="current-channel">Seleccioná un canal</h2>
       <span id="current-type"></span>
@@ -60,23 +79,27 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 
 <script>
 const channels = [];
+const allChannels = [];
 let player = null;
 let currentUrl = null;
+let currentFilter = 'all';
+let loadTimeout = null;
 
 const KEY = '2f903b3f-3e3e-4c77-b3ef-4afed705ae75';
 
-// Inicializar Bitmovin sin stream
 function initPlayer() {
   try {
     if (typeof bitmovin === 'undefined') {
       document.getElementById('status').textContent = '❌ Bitmovin no cargó';
       return false;
     }
-    player = new bitmovin.player.Player(document.getElementById('player'), {
-      key: KEY,
-      ui: false
-    });
+    player = new bitmovin.player.Player(document.getElementById('player'), { key: KEY, ui: false });
     document.getElementById('status').textContent = '✅ Bitmovin listo';
+    
+    player.addEventListener('error', function(e) {
+      showError('Error de reproducción: ' + (e.message || 'desconocido'));
+    });
+    
     return true;
   } catch(e) {
     document.getElementById('status').textContent = '❌ ' + e.message;
@@ -84,39 +107,68 @@ function initPlayer() {
   }
 }
 
-// Cargar canales
+function showError(msg) {
+  document.getElementById('error-overlay').style.display = 'block';
+  document.getElementById('error-text').textContent = msg;
+  document.getElementById('status').textContent = '❌ Error';
+}
+
+function hideError() {
+  document.getElementById('error-overlay').style.display = 'none';
+}
+
 async function loadChannels() {
   try {
     const resp = await fetch('channels/channels.json');
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const data = await resp.json();
-    channels.push(...data);
-    render();
-    document.getElementById('channel-count').textContent = channels.length + ' canales';
+    allChannels.length = 0;
+    allChannels.push(...data);
+    
+    // Add http flag
+    allChannels.forEach(ch => {
+      ch.isHttps = ch.url.startsWith('https://');
+      if (ch.type === 'm3u8' && !ch.isHttps) ch.typeDisplay = 'http';
+      else ch.typeDisplay = ch.type;
+    });
+    
+    applyFilter();
+    document.getElementById('channel-count').textContent = allChannels.length + ' canales';
   } catch(e) {
     document.getElementById('channel-list').innerHTML = 
-      '<div style="padding:20px;text-align:center;color:#f55;">Error: ' + e.message + '</div>';
+      '<div style="padding:20px;text-align:center;color:#f55;">Error cargando canales: ' + e.message + '<br><br><button onclick="location.reload()" style="padding:8px 16px;border-radius:8px;border:1px solid #2a2a3a;background:#1a1a25;color:#fff;cursor:pointer;">Reintentar</button></div>';
   }
+}
+
+function applyFilter() {
+  currentFilter = document.querySelector('.filter-btn.active')?.dataset?.filter || 'all';
+  render();
 }
 
 function render() {
   const q = document.getElementById('search').value.toLowerCase();
   const list = document.getElementById('channel-list');
-  const filtered = q ? channels.filter(c => c.name.toLowerCase().includes(q)) : channels;
+  
+  let filtered = allChannels;
+  if (q) filtered = filtered.filter(c => c.name.toLowerCase().includes(q));
+  
+  if (currentFilter === 'https') filtered = filtered.filter(c => c.url.startsWith('https://'));
+  else if (currentFilter === 'mpd') filtered = filtered.filter(c => c.type === 'mpd');
+  else if (currentFilter === 'http') filtered = filtered.filter(c => c.type === 'm3u8' && !c.url.startsWith('https://'));
   
   if (filtered.length === 0) {
-    list.innerHTML = '<div style="padding:20px;text-align:center;color:#555;">Sin resultados</div>';
+    list.innerHTML = '<div style="padding:20px;text-align:center;color:#555;">Sin canales en este filtro</div>';
     return;
   }
   
-  list.innerHTML = filtered.map(ch => 
-    `<div class="ch-item ${currentUrl === ch.url ? 'active' : ''}" data-url="${ch.url}">
+  list.innerHTML = filtered.map(ch => {
+    const t = ch.type === 'mpd' ? 'mpd' : (ch.url.startsWith('https://') ? 'm3u8' : 'http');
+    return `<div class="ch-item ${currentUrl === ch.url ? 'active' : ''}" data-url="${ch.url}">
       <span>${ch.name}</span>
-      <span class="ch-type ${ch.type}">${ch.type}</span>
-    </div>`
-  ).join('');
+      <span class="ch-type ${t}">${t}</span>
+    </div>`;
+  }).join('');
   
-  // Click handler via delegation
   list.onclick = function(e) {
     const item = e.target.closest('.ch-item');
     if (item) playChannel(item.dataset.url);
@@ -125,15 +177,42 @@ function render() {
 
 document.getElementById('search').addEventListener('input', render);
 
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    applyFilter();
+  });
+});
+
 async function playChannel(url) {
-  const ch = channels.find(c => c.url === url);
+  const ch = allChannels.find(c => c.url === url);
   if (!ch) return;
   
   currentUrl = ch.url;
-  render();
+  hideError();
+  
+  document.querySelectorAll('.ch-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.url === url);
+  });
+  
   document.getElementById('current-channel').textContent = '▶ ' + ch.name;
   document.getElementById('current-type').textContent = ch.type;
   document.getElementById('status').textContent = 'Cargando...';
+  
+  // Check if HTTP on HTTPS
+  if (!url.startsWith('https://') && location.protocol === 'https:') {
+    showError('Este canal solo funciona en HTTP (no disponible en HTTPS). Probá con el filtro HTTPS.');
+    document.getElementById('status').textContent = '❌ Mixed Content';
+    return;
+  }
+  
+  // Timeout
+  if (loadTimeout) clearTimeout(loadTimeout);
+  loadTimeout = setTimeout(() => {
+    showError('Timeout: el stream no responde después de 20 segundos');
+    document.getElementById('status').textContent = '❌ Timeout';
+  }, 20000);
   
   try {
     let source = { title: ch.name };
@@ -149,11 +228,14 @@ async function playChannel(url) {
     }
     
     await player.load(source);
+    if (loadTimeout) clearTimeout(loadTimeout);
     document.getElementById('status').textContent = '▶ OK';
+    document.getElementById('current-channel').textContent = ch.name;
     
   } catch(e) {
+    if (loadTimeout) clearTimeout(loadTimeout);
+    showError(e.message || 'Error de reproducción');
     document.getElementById('status').textContent = '❌ ' + (e.message || 'error');
-    document.getElementById('current-channel').textContent = 'Error: ' + ch.name;
   }
 }
 
