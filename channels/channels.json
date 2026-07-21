@@ -1,33 +1,5 @@
 [
   {
-    "name": "Canal 4 Uruguay",
-    "type": "mpd",
-    "b64": "Q2FuYWw0X1VSVQ==",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Canal 10 Uruguay",
-    "type": "mpd",
-    "b64": "Q2FuYWwxMF9VUlU=",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Teledoce",
-    "type": "mpd",
-    "b64": "Q2FuYWwxMlVSVQ==",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "A24",
-    "type": "mpd",
-    "b64": "QW1lcmljYTI0",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
     "name": "America TV",
     "type": "mpd",
     "b64": "QW1lcmljYVRW",
@@ -42,20 +14,6 @@
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
-    "name": "Cronica TV",
-    "type": "mpd",
-    "b64": "Q3JvbmljYVRW",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "TN",
-    "type": "mpd",
-    "b64": "VG9kb05vdGljaWFz",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
     "name": "Disney Channel",
     "type": "mpd",
     "b64": "RGlzbmV5Q2hhbm5lbEhE",
@@ -63,79 +21,9 @@
     "key": "0df77ede9bc744376836d21afa137dda"
   },
   {
-    "name": "HBO",
-    "type": "mpd",
-    "b64": "SEJPSEQ=",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO 2",
-    "type": "mpd",
-    "b64": "SEJPXzI=",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO Plus",
-    "type": "mpd",
-    "b64": "SEJPX1BsdXM=",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO Family",
-    "type": "mpd",
-    "b64": "SEJPX0ZhbWlseQ==",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO Mundi",
-    "type": "mpd",
-    "b64": "SEJPX011bmRp",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO Xtreme",
-    "type": "mpd",
-    "b64": "SEJPX0V4dHJlbWU=",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO Pop",
-    "type": "mpd",
-    "b64": "SEJPX1BPUA==",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "HBO Signature",
-    "type": "mpd",
-    "b64": "SEJPX1NpZ25hdHVyZQ==",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "History",
-    "type": "mpd",
-    "b64": "SGlzdG9yeUhE",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
     "name": "Nat Geo",
     "type": "mpd",
     "b64": "TmF0R2VvSEQ=",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Animal Planet",
-    "type": "mpd",
-    "b64": "QW5pbWFsUGxhbmV0",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
@@ -147,13 +35,6 @@
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
-    "name": "MTV",
-    "type": "mpd",
-    "b64": "TVRWX0hE",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
     "name": "Nick",
     "type": "mpd",
     "b64": "Tmlja2Vsb2Rlb24=",
@@ -161,37 +42,9 @@
     "key": "cb89ee3961599e3e648a5aad60895f34"
   },
   {
-    "name": "Nick Jr",
-    "type": "mpd",
-    "b64": "Tmlja19Kcg==",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
     "name": "TNT Series",
     "type": "mpd",
     "b64": "VE5UU2VyaWVz",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "TNT Novelas",
-    "type": "mpd",
-    "b64": "VEJT",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "Sony Channel",
-    "type": "mpd",
-    "b64": "U29ueUhE",
-    "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
-    "key": "cb89ee3961599e3e648a5aad60895f34"
-  },
-  {
-    "name": "CM",
-    "type": "mpd",
-    "b64": "Q00=",
     "keyId": "e884b711ab111beb8a7ba1e7bcbdc9bf",
     "key": "cb89ee3961599e3e648a5aad60895f34"
   }
