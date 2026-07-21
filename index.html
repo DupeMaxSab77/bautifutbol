@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StreamHub - Bitmovin Player</title>
+<title>StreamHub</title>
 <script src="https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js"></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -18,18 +18,20 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 .ch-item { padding:10px; border-radius:8px; cursor:pointer; margin-bottom:2px; transition:.15s; display:flex; justify-content:space-between; }
 .ch-item:hover { background:#1e1e2e; }
 .ch-item.active { background:#00e67622; border-left:3px solid #00e676; }
-.ch-type { font-size:10px; padding:2px 6px; border-radius:4px; background:#2a2a3a; }
+.ch-type { font-size:10px; padding:2px 6px; border-radius:4px; }
 .ch-type.m3u8 { background:#1a3a2a; color:#00e676; }
 .ch-type.mpd { background:#3a1a2a; color:#ff6b9d; }
 #main { flex:1; display:flex; flex-direction:column; min-height:0; }
 #player-container { flex:1; background:#000; position:relative; min-height:0; }
 #player { width:100%; height:100%; position:absolute; top:0; left:0; }
 #channel-info { padding:12px 20px; background:#12121a; border-top:1px solid #2a2a3a; display:flex; align-items:center; gap:12px; }
-#channel-info h2 { font-size:16px; }
+#channel-info h2 { font-size:16px; flex:1; }
 #current-type { font-size:11px; padding:3px 8px; border-radius:4px; background:#2a2a3a; }
-#status-msg { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); background:#1a1a25; color:#888; padding:8px 16px; border-radius:8px; font-size:12px; z-index:10; }
+#status { font-size:12px; color:#888; }
 ::-webkit-scrollbar { width:6px; }
 ::-webkit-scrollbar-thumb { background:#2a2a3a; border-radius:3px; }
+.sidebar-footer { padding:12px 16px; border-top:1px solid #2a2a3a; font-size:12px; color:#666; display:flex; justify-content:space-between; }
+.sidebar-footer button { background:#1a1a25; border:1px solid #2a2a3a; color:#888; width:32px; height:32px; border-radius:8px; cursor:pointer; }
 @media(max-width:768px) { #app { flex-direction:column; } #sidebar { width:100%; max-height:40vh; } }
 </style>
 </head>
@@ -40,20 +42,18 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
       <h1>StreamHub</h1>
       <input type="text" id="search" placeholder="Buscar canal...">
     </div>
-    <div id="channel-list"></div>
-    <div class="sidebar-footer" style="padding:12px 16px;border-top:1px solid #2a2a3a;font-size:12px;color:#666;display:flex;justify-content:space-between;">
-      <span id="channel-count">0 canales</span>
-      <button id="refresh-btn" onclick="loadChannels()" style="background:#1a1a25;border:1px solid #2a2a3a;color:#888;width:32px;height:32px;border-radius:8px;cursor:pointer;">↻</button>
+    <div id="channel-list"><div style="padding:20px;text-align:center;color:#555;">Cargando canales...</div></div>
+    <div class="sidebar-footer">
+      <span id="channel-count">0</span>
+      <button onclick="location.reload()">↻</button>
     </div>
   </aside>
   <main id="main">
-    <div id="player-container">
-      <div id="player"></div>
-      <div id="status-msg">Cargando Bitmovin Player...</div>
-    </div>
+    <div id="player-container"><div id="player"></div></div>
     <div id="channel-info">
-      <h2 id="current-channel">Inicializando...</h2>
-      <span id="current-type">Bitmovin</span>
+      <h2 id="current-channel">Seleccioná un canal</h2>
+      <span id="current-type"></span>
+      <span id="status">Bitmovin listo</span>
     </div>
   </main>
 </div>
@@ -61,80 +61,79 @@ body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
 <script>
 const channels = [];
 let player = null;
-let currentChannel = null;
-let playerReady = false;
+let currentUrl = null;
 
-const BITMOVIN_KEY = '2f903b3f-3e3e-4c77-b3ef-4afed705ae75';
+const KEY = '2f903b3f-3e3e-4c77-b3ef-4afed705ae75';
 
-// Inicializar Bitmovin con un stream de prueba para verificar que funciona
-async function initPlayer() {
+// Inicializar Bitmovin sin stream
+function initPlayer() {
   try {
     if (typeof bitmovin === 'undefined') {
-      document.getElementById('status-msg').textContent = 'Error: Bitmovin no cargó';
-      return;
+      document.getElementById('status').textContent = '❌ Bitmovin no cargó';
+      return false;
     }
-    
     player = new bitmovin.player.Player(document.getElementById('player'), {
-      key: BITMOVIN_KEY,
-      ui: { style: { aspectratio: '16/9' } }
+      key: KEY,
+      ui: false
     });
-    
-    // Cargar stream de prueba (Art of Motion - MPD público)
-    await player.load({
-      title: 'StreamHub - Demo',
-      dash: 'https://cdn.bitmovin.com/content/assets/art-of-motion-dash-hls-progressive/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd'
-    });
-    
-    playerReady = true;
-    document.getElementById('status-msg').textContent = '✅ Bitmovin listo - seleccioná un canal';
-    document.getElementById('current-channel').textContent = 'Seleccioná un canal';
-    
+    document.getElementById('status').textContent = '✅ Bitmovin listo';
+    return true;
   } catch(e) {
-    document.getElementById('status-msg').textContent = 'Error Bitmovin: ' + (e.message || e);
-    console.error(e);
+    document.getElementById('status').textContent = '❌ ' + e.message;
+    return false;
   }
 }
 
+// Cargar canales
 async function loadChannels() {
   try {
     const resp = await fetch('channels/channels.json');
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const data = await resp.json();
-    channels.length = 0;
     channels.push(...data);
-    renderChannels();
+    render();
     document.getElementById('channel-count').textContent = channels.length + ' canales';
-  } catch(e) { console.error(e); }
+  } catch(e) {
+    document.getElementById('channel-list').innerHTML = 
+      '<div style="padding:20px;text-align:center;color:#f55;">Error: ' + e.message + '</div>';
+  }
 }
 
-function renderChannels(filter = '') {
-  const q = filter.toLowerCase();
+function render() {
+  const q = document.getElementById('search').value.toLowerCase();
   const list = document.getElementById('channel-list');
   const filtered = q ? channels.filter(c => c.name.toLowerCase().includes(q)) : channels;
+  
+  if (filtered.length === 0) {
+    list.innerHTML = '<div style="padding:20px;text-align:center;color:#555;">Sin resultados</div>';
+    return;
+  }
+  
   list.innerHTML = filtered.map(ch => 
-    `<div class="ch-item ${currentChannel === ch.url ? 'active' : ''}" onclick="playChannel('${encodeURIComponent(ch.url)}')">
+    `<div class="ch-item ${currentUrl === ch.url ? 'active' : ''}" data-url="${ch.url}">
       <span>${ch.name}</span>
       <span class="ch-type ${ch.type}">${ch.type}</span>
     </div>`
   ).join('');
+  
+  // Click handler via delegation
+  list.onclick = function(e) {
+    const item = e.target.closest('.ch-item');
+    if (item) playChannel(item.dataset.url);
+  };
 }
 
-document.getElementById('search').addEventListener('input', e => renderChannels(e.target.value));
+document.getElementById('search').addEventListener('input', render);
 
-async function playChannel(encodedUrl) {
-  if (!playerReady) {
-    document.getElementById('status-msg').textContent = 'Bitmovin aún no está listo';
-    return;
-  }
-  
-  const url = decodeURIComponent(encodedUrl);
+async function playChannel(url) {
   const ch = channels.find(c => c.url === url);
   if (!ch) return;
   
-  currentChannel = ch.url;
-  renderChannels(document.getElementById('search').value);
-  document.getElementById('current-channel').textContent = 'Cargando: ' + ch.name;
+  currentUrl = ch.url;
+  render();
+  document.getElementById('current-channel').textContent = '▶ ' + ch.name;
   document.getElementById('current-type').textContent = ch.type;
-  document.getElementById('status-msg').textContent = 'Cargando ' + ch.name + '...';
+  document.getElementById('status').textContent = 'Cargando...';
   
   try {
     let source = { title: ch.name };
@@ -142,26 +141,22 @@ async function playChannel(encodedUrl) {
     if (ch.type === 'mpd') {
       source.dash = ch.url;
       if (ch.keyId && ch.key) {
-        source.drm = { clearkey: { [ch.keyId]: ch.key } };
+        source.drm = { clearkey: {} };
+        source.drm.clearkey[ch.keyId] = ch.key;
       }
-      document.getElementById('status-msg').textContent = 'MPD con DRM Clearkey';
     } else {
       source.hls = ch.url;
-      document.getElementById('status-msg').textContent = 'HLS';
     }
     
     await player.load(source);
-    document.getElementById('status-msg').textContent = '▶ Reproduciendo';
-    document.getElementById('current-channel').textContent = ch.name;
+    document.getElementById('status').textContent = '▶ OK';
     
   } catch(e) {
-    document.getElementById('status-msg').textContent = 'Error: ' + (e.message || e);
-    document.getElementById('current-channel').textContent = '❌ ' + ch.name;
-    console.error(e);
+    document.getElementById('status').textContent = '❌ ' + (e.message || 'error');
+    document.getElementById('current-channel').textContent = 'Error: ' + ch.name;
   }
 }
 
-// Arrancar
 initPlayer();
 loadChannels();
 </script>
