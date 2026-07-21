@@ -17,7 +17,6 @@ async function loadChannels() {
 function renderChannels(filter = '') {
   const list = document.getElementById('channel-list');
   const q = filter.toLowerCase();
-  
   const filtered = q ? channels.filter(c => c.name.toLowerCase().includes(q)) : channels;
   
   list.innerHTML = filtered.map(ch => `
@@ -67,26 +66,37 @@ async function playChannel(encodedUrl) {
       document.getElementById('loading-msg').classList.add('hidden');
     }
   } catch(e) {
-    showError(`Error: ${e.message || 'No se puede reproducir'}`);
+    showError(e.message || 'No se puede reproducir');
   }
 }
 
 function playM3U8(url, video) {
   return new Promise((resolve, reject) => {
     if (Hls.isSupported()) {
-      const hls = new Hls({ xhrSetup: (xhr) => {
-        xhr.withCredentials = false;
-      }});
+      const hls = new Hls({
+        xhrSetup: (xhr) => { xhr.withCredentials = false; },
+        enableWorker: false
+      });
       currentPlayer = hls;
       hls.loadSource(url);
       hls.attachMedia(video);
+      
+      const timeout = setTimeout(() => {
+        reject(new Error('Timeout: el stream no responde'));
+      }, 15000);
+      
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        clearTimeout(timeout);
         video.play().catch(() => {});
         document.getElementById('loading-msg').classList.add('hidden');
         resolve();
       });
       hls.on(Hls.Events.ERROR, (_, data) => {
-        if (data.fatal) reject(new Error('Error fatal HLS'));
+        if (data.fatal) {
+          clearTimeout(timeout);
+          const msg = data.response ? `HTTP ${data.response.code}` : 'Error de conexión';
+          reject(new Error(`HLS: ${msg}`));
+        }
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = url;
@@ -95,8 +105,11 @@ function playM3U8(url, video) {
         document.getElementById('loading-msg').classList.add('hidden');
         resolve();
       });
+      video.addEventListener('error', () => {
+        reject(new Error('Error al cargar el video'));
+      });
     } else {
-      reject(new Error('HLS no soportado'));
+      reject(new Error('HLS no soportado en este navegador'));
     }
   });
 }
@@ -105,7 +118,7 @@ function playMPD(url, video) {
   return new Promise((resolve, reject) => {
     shaka.polyfill.installAll();
     if (!shaka.Player.isBrowserSupported()) {
-      reject(new Error('MPD no soportado en este navegador'));
+      reject(new Error('MPD no soportado en este navegador. Usá Chrome.'));
       return;
     }
     
@@ -114,36 +127,37 @@ function playMPD(url, video) {
     player.attach(video);
     
     player.configure({
-      drm: {
-        servers: {},
-        clearKeys: {}
-      },
-      manifest: {
-        dash: {
-          ignoreMinBufferTime: true
-        }
-      }
+      drm: { servers: {}, clearKeys: {} },
+      manifest: { dash: { ignoreMinBufferTime: true } },
+      streaming: { retryParameters: { maxAttempts: 1 } }
     });
     
-    player.addEventListener('error', (e) => {
-      const code = e.detail ? e.detail.code : 0;
-      if (code === 6012) {
-        reject(new Error('MPD requiere DRM (Clearkey). Instalá la extensión Chrome: https://chromewebstore.google.com/detail/opmeopcambhfimffbomjgemehjkbbmji'));
-      } else {
-        reject(new Error(`Error MPD (${code})`));
-      }
+    const timeout = setTimeout(() => {
+      reject(new Error('Timeout: el MPD no responde'));
+    }, 15000);
+    
+    player.addEventListener('error', () => {
+      clearTimeout(timeout);
     });
     
     player.load(url).then(() => {
+      clearTimeout(timeout);
       video.play().catch(() => {});
       document.getElementById('loading-msg').classList.add('hidden');
       resolve();
     }).catch((err) => {
-      if (err.code === 6012) {
-        reject(new Error('MPD requiere DRM (Clearkey). Usá Chrome con la extensión MPD.'));
-      } else {
-        reject(err);
-      }
+      clearTimeout(timeout);
+      const code = err.code || err.detail?.code || 0;
+      const msg = err.message || '';
+      
+      const msgs = {
+        1001: 'HTTP Error: el stream MPD no está disponible (403/404). Probablemente expiró el token.',
+        6012: 'DRM: este MPD requiere la extensión Chrome. Instalala: https://chromewebstore.google.com/detail/opmeopcambhfimffbomjgemehjkbbmji',
+        1002: 'Error de red: verificá tu conexión.',
+        1003: 'El stream MPD no es accesible desde esta ubicación.'
+      };
+      
+      reject(new Error(msgs[code] || `Error MPD (${code}): ${msg.slice(0,100)}`));
     });
   });
 }
@@ -151,7 +165,7 @@ function playMPD(url, video) {
 function showError(msg) {
   document.getElementById('loading-msg').classList.add('hidden');
   const el = document.getElementById('error-msg');
-  el.textContent = msg;
+  el.innerHTML = msg.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" style="color:#00e676">$1</a>');
   el.classList.remove('hidden');
 }
 

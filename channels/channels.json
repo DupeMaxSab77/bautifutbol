@@ -1740,12 +1740,6 @@
     "group": "TLF-MPD"
   },
   {
-    "name": "Canal 26",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds//SA_Live_dash_enc/.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD"
-  },
-  {
     "name": "A24",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/America24/SA_Live_dash_enc/America24.mpd",
     "type": "mpd",
@@ -1868,12 +1862,6 @@
   {
     "name": "Nickjr",
     "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds/Nick_Jr/SA_Live_dash_enc/Nick_Jr.mpd",
-    "type": "mpd",
-    "group": "TLF-MPD"
-  },
-  {
-    "name": "Tnt",
-    "url": "https://edge-live02-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzg0NjA4NDU4Iiwic2lwIjoiODQuMjUyLjExNC4yIiwicGF0aCI6Ii9saXZlL2M0ZWRzL1RlbGVmZV9OZXVxdWVuL1NBX0xpdmVfZGFzaF9lbmNfLyIsInNlc3Npb25fY2RuX2lkIjoiYzI1YjY4YTk4OGM5ZmZhNCIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiIzNDEiLCJzb3VyY2VzIjpbODUsMTQ0LDIxMCw4Niw4OF19.jNvFf8BqFJD5bm4fT5CYCBRyj1KO6k8EiRKWVGyH6e9mZKrvLHq7EgMihqp2BkwTEgatoavE5gpuKBlFLFzzvg==/live/c7eds//SA_Live_dash_enc/.mpd",
     "type": "mpd",
     "group": "TLF-MPD"
   },
