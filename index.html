@@ -4,9 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StreamHub - Bitmovin Player</title>
-<!-- Bitmovin Player Community Edition -->
-<script src="https://cdn.bitmovin.com/player/brim/latest/bitmovinplayer.js"></script>
-<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/bitmovin-player@8/bitmovinplayer.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial,sans-serif; background:#0a0a0f; color:#e0e0e0; }
+#app { display:flex; height:100vh; }
+#sidebar { width:320px; background:#12121a; display:flex; flex-direction:column; border-right:1px solid #2a2a3a; }
+.sidebar-header { padding:16px; border-bottom:1px solid #2a2a3a; }
+.sidebar-header h1 { font-size:20px; color:#00e676; margin-bottom:12px; }
+#search { width:100%; padding:10px; border-radius:8px; border:1px solid #2a2a3a; background:#1a1a25; color:#fff; font-size:14px; outline:none; }
+#search:focus { border-color:#00e676; }
+#channel-list { flex:1; overflow-y:auto; padding:8px; }
+.ch-item { padding:10px; border-radius:8px; cursor:pointer; margin-bottom:2px; transition:.15s; display:flex; justify-content:space-between; }
+.ch-item:hover { background:#1e1e2e; }
+.ch-item.active { background:#00e67622; border-left:3px solid #00e676; }
+.ch-type { font-size:10px; padding:2px 6px; border-radius:4px; background:#2a2a3a; }
+.ch-type.m3u8 { background:#1a3a2a; color:#00e676; }
+.ch-type.mpd { background:#3a1a2a; color:#ff6b9d; }
+#main { flex:1; display:flex; flex-direction:column; }
+#player-container { flex:1; background:#000; }
+#player { width:100%; height:100%; }
+#channel-info { padding:12px 20px; background:#12121a; border-top:1px solid #2a2a3a; display:flex; align-items:center; gap:12px; }
+#channel-info h2 { font-size:16px; }
+#current-type { font-size:11px; padding:3px 8px; border-radius:4px; background:#2a2a3a; }
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-thumb { background:#2a2a3a; border-radius:3px; }
+@media(max-width:768px) { #app { flex-direction:column; } #sidebar { width:100%; max-height:40vh; } }
+</style>
 </head>
 <body>
 <div id="app">
@@ -16,62 +40,51 @@
       <input type="text" id="search" placeholder="Buscar canal...">
     </div>
     <div id="channel-list"></div>
-    <div class="sidebar-footer">
+    <div class="sidebar-footer" style="padding:12px 16px;border-top:1px solid #2a2a3a;font-size:12px;color:#666;display:flex;justify-content:space-between;">
       <span id="channel-count">0 canales</span>
-      <button id="refresh-btn" onclick="refreshPlaylist()">↻</button>
+      <button id="refresh-btn" onclick="loadChannels()" style="background:#1a1a25;border:1px solid #2a2a3a;color:#888;width:32px;height:32px;border-radius:8px;cursor:pointer;">↻</button>
     </div>
   </aside>
-
   <main id="main">
-    <div id="player-container">
-      <div id="bitmovin-player"></div>
-      <div id="player-overlay">
-        <div id="loading-msg">Seleccioná un canal</div>
-        <div id="error-msg" class="hidden"></div>
-      </div>
-    </div>
+    <div id="player-container"><div id="player"></div></div>
     <div id="channel-info">
       <h2 id="current-channel">Sin canal seleccionado</h2>
       <span id="current-type"></span>
-      <span id="player-status"></span>
     </div>
   </main>
 </div>
 
-<!-- Fallback players si Bitmovin no carga -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/shaka-player@latest/dist/shaka-player.compiled.js"></script>
-
 <script>
 const channels = [];
-let currentPlayer = null;
+let player = null;
 let currentChannel = null;
-let bitmovinPlayer = null;
-let bitmovinReady = false;
+
+const BITMOVIN_KEY = '2f903b3f-3e3e-4c77-b3ef-4afed705ae75';
 
 async function loadChannels() {
   try {
     const resp = await fetch('channels/channels.json');
     const data = await resp.json();
+    channels.length = 0;
     channels.push(...data);
     renderChannels();
-    document.getElementById('channel-count').textContent = `${channels.length} canales`;
+    document.getElementById('channel-count').textContent = channels.length + ' canales';
   } catch(e) { console.error(e); }
 }
 
 function renderChannels(filter = '') {
-  const list = document.getElementById('channel-list');
   const q = filter.toLowerCase();
+  const list = document.getElementById('channel-list');
   const filtered = q ? channels.filter(c => c.name.toLowerCase().includes(q)) : channels;
-  list.innerHTML = filtered.map(ch => `
-    <div class="ch-item ${currentChannel === ch.url ? 'active' : ''}" onclick="playChannel('${encodeURIComponent(ch.url)}')">
-      <div class="ch-name">${ch.name}</div>
+  list.innerHTML = filtered.map(ch => 
+    `<div class="ch-item ${currentChannel === ch.url ? 'active' : ''}" onclick="playChannel('${encodeURIComponent(ch.url)}')">
+      <span>${ch.name}</span>
       <span class="ch-type ${ch.type}">${ch.type}</span>
-    </div>
-  `).join('');
+    </div>`
+  ).join('');
 }
 
-document.getElementById('search').addEventListener('input', (e) => renderChannels(e.target.value));
+document.getElementById('search').addEventListener('input', e => renderChannels(e.target.value));
 
 async function playChannel(encodedUrl) {
   const url = decodeURIComponent(encodedUrl);
@@ -80,157 +93,41 @@ async function playChannel(encodedUrl) {
   
   currentChannel = ch.url;
   renderChannels(document.getElementById('search').value);
-  
   document.getElementById('current-channel').textContent = ch.name;
   document.getElementById('current-type').textContent = ch.type;
-  document.getElementById('loading-msg').textContent = 'Cargando...';
-  document.getElementById('loading-msg').classList.remove('hidden');
-  document.getElementById('error-msg').classList.add('hidden');
   
-  destroyPlayer();
-  
-  if (typeof bitmovin !== 'undefined' && bitmovin !== null) {
-    document.getElementById('player-status').textContent = 'Bitmovin';
-    await playWithBitmovin(ch);
-  } else {
-    document.getElementById('player-status').textContent = 'Fallback';
-    await playWithFallback(ch);
-  }
-}
-
-async function playWithBitmovin(ch) {
-  const container = document.getElementById('bitmovin-player');
-  
-  if (!bitmovinPlayer) {
-    bitmovinPlayer = new bitmovin.player.Player(container, {
-      key: '',  // Community key - opcional con watermark
-      source: {},
-      ui: false,
-      style: { aspectratio: '16:9' }
+  if (!player) {
+    player = new bitmovin.player.Player(document.getElementById('player'), {
+      key: BITMOVIN_KEY,
+      ui: false
     });
-    bitmovinPlayer.load(['https://cdn.bitmovin.com/player/brim/latest/bitmovinplayer-ui.css']);
   }
   
   try {
-    let sourceConfig;
+    let source = {};
     
     if (ch.type === 'mpd') {
-      sourceConfig = {
-        dash: ch.url,
-        drm: { clearkey: {} }
+      source = {
+        title: ch.name,
+        dash: ch.url
       };
       if (ch.keyId && ch.key) {
-        sourceConfig.drm.clearkey[ch.keyId] = ch.key;
+        source.drm = { clearkey: {} };
+        source.drm.clearkey[ch.keyId] = ch.key;
       }
     } else {
-      sourceConfig = { hls: ch.url };
+      source = {
+        title: ch.name,
+        hls: ch.url
+      };
     }
     
-    await bitmovinPlayer.load(sourceConfig);
-    document.getElementById('loading-msg').classList.add('hidden');
+    await player.load(source);
+    document.getElementById('channel-info').style.borderTop = '3px solid #00e676';
   } catch(e) {
-    throw new Error('Bitmovin: ' + (e.message || 'error'));
+    document.getElementById('current-channel').textContent = 'Error: ' + (e.message || 'reproduccion');
+    document.getElementById('channel-info').style.borderTop = '3px solid #ff5252';
   }
-}
-
-async function playWithFallback(ch) {
-  const video = document.getElementById('bitmovin-player');
-  // Convert div to video if needed
-  if (video.tagName !== 'VIDEO') {
-    const v = document.createElement('video');
-    v.id = 'fallback-video';
-    v.controls = true;
-    v.autoplay = true;
-    v.playsinline = true;
-    v.style.width = '100%';
-    v.style.height = '100%';
-    document.getElementById('player-container').insertBefore(v, document.getElementById('player-overlay'));
-    document.getElementById('bitmovin-player').style.display = 'none';
-    
-    if (ch.type === 'mpd') {
-      await playMPD(ch, v);
-    } else {
-      await playM3U8(ch.url, v);
-    }
-  }
-}
-
-function playM3U8(url, video) {
-  return new Promise((resolve, reject) => {
-    if (Hls.isSupported()) {
-      const hls = new Hls({ enableWorker: false });
-      currentPlayer = hls;
-      hls.loadSource(url);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(() => {});
-        document.getElementById('loading-msg').classList.add('hidden');
-        resolve();
-      });
-      hls.on(Hls.Events.ERROR, (_, data) => {
-        if (data.fatal) reject(new Error('HLS error'));
-      });
-    } else {
-      video.src = url;
-      video.play().catch(() => {});
-      document.getElementById('loading-msg').classList.add('hidden');
-      resolve();
-    }
-  });
-}
-
-function playMPD(ch, video) {
-  return new Promise(async (resolve, reject) => {
-    shaka.polyfill.installAll();
-    const player = new shaka.Player();
-    currentPlayer = player;
-    await player.attach(video);
-    
-    const config = { drm: {}, manifest: { dash: { ignoreMinBufferTime: true } } };
-    if (ch.keyId && ch.key) {
-      config.drm = { clearKeys: {} };
-      config.drm.clearKeys[ch.keyId] = ch.key;
-    }
-    player.configure(config);
-    
-    try {
-      await player.load(ch.url);
-      video.play().catch(() => {});
-      document.getElementById('loading-msg').classList.add('hidden');
-      resolve();
-    } catch(err) {
-      reject(new Error('MPD error: ' + (err.code || err.message)));
-    }
-  });
-}
-
-function showError(msg) {
-  document.getElementById('loading-msg').classList.add('hidden');
-  const el = document.getElementById('error-msg');
-  el.innerHTML = msg;
-  el.classList.remove('hidden');
-}
-
-function destroyPlayer() {
-  if (bitmovinPlayer) {
-    try { bitmovinPlayer.destroy(); } catch(e) {}
-    bitmovinPlayer = null;
-  }
-  if (currentPlayer) {
-    try { currentPlayer.destroy(); } catch(e) {}
-    currentPlayer = null;
-  }
-  const fallback = document.getElementById('fallback-video');
-  if (fallback) {
-    fallback.src = '';
-    fallback.load();
-  }
-}
-
-async function refreshPlaylist() {
-  document.getElementById('refresh-btn').textContent = '⟳';
-  await loadChannels();
-  setTimeout(() => { document.getElementById('refresh-btn').textContent = '↻'; }, 1000);
 }
 
 loadChannels();
