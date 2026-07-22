@@ -1,6 +1,5 @@
 FROM python:3-alpine
-RUN pip install flask
-COPY . /app
 WORKDIR /app
+COPY . .
 EXPOSE 80
-CMD ["python3", "server.py"]
+CMD ["python3", "-m", "http.server", "80"]
